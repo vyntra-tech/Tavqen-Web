@@ -642,6 +642,7 @@
   ],
   "activity": [
     {
+<<<<<<< HEAD
       "id": "act-1793515514006-c8377a",
       "actor": "TAVQEN Technologies (admin@tavqen.tech)",
       "action": "AUTH_LOGIN",
@@ -896,6 +897,14 @@
       "target": "File: 1793286529445-mentorship_moment.jpg",
       "details": "790.3 KB",
       "timestamp": "2026-10-29T15:08:49.512Z"
+=======
+      "id": "act-1793279695294-63b677",
+      "actor": "Chandrabhan Gadeshwar (admin@vyntra.tech)",
+      "action": "AUTH_LOGIN",
+      "target": "Admin Portal",
+      "details": "Logged in as admin",
+      "timestamp": "2026-10-29T13:14:55.294Z"
+>>>>>>> 17bc373b0871c002bb52ad8771c5a6d1dcc05136
     },
     {
       "id": "act-1793244525729-bcc490",

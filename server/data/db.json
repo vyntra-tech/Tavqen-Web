@@ -2,23 +2,23 @@
   "users": [
     {
       "id": "usr-admin-1",
-      "name": "TAVQEN Technologies",
+      "name": "Chandrabhan Gadeshwar",
       "email": "admin@tavqen.tech",
-      "passwordHash": "07c7d78fecdaf17c6c9b24bc4bdeacda:438afb9e29e03cf85d4f27ab0f6c609a63fbffd7b11d255d416ad84e941c8fdfed872840c2e8593304a34082a3a5e30ac0cbcdd0dbeab6447bf763969f9d46cf",
+      "passwordHash": "44e6a2661735d800f8ed3d8d79f0a334:786c6f927c227ddbf2d7fa073d52a6c82eef44fdf2e910dcfcf7d6febb067081311416caf4ba3f69b188b076f316c7f1742e8c4a011691ccc066e6a88e78616f",
       "role": "admin",
-      "avatar": "/src/assets/chandrabhan.jpg",
+      "avatar": "/uploads/chandrabhan.jpg",
       "title": "Founder & Chief Architect",
-      "createdAt": "2026-10-23T03:48:38.818Z"
+      "createdAt": "2026-11-01T07:37:40.953Z"
     },
     {
       "id": "usr-editor-1",
       "name": "Editorial Team",
       "email": "editor@tavqen.tech",
-      "passwordHash": "b1f22a414e7fefaa3e6a51584bf05446:d6798f75b6fe886c76961f8d72a996a2a55e978455897e0ab444ed5983e8e34a0e20958983b28d6c7eddf5a5c1ea3d84c7fbcc2880b4c596a3a7b7fef3a76e47",
+      "passwordHash": "7ccc370d01254c74aea883e1fc068e27:d538ddacb2048ba81aba2a17d66ec4a6301b30cd2508659cd3d4322d81150fd4b4ac5eebdb2a6e38f8eac67304a14c4cd16c603503dbed3ff89a3834b8dfd75b",
       "role": "editor",
-      "avatar": "/src/assets/shubham.jpg",
+      "avatar": "/uploads/shubham.jpg",
       "title": "Content & Design Lead",
-      "createdAt": "2026-10-23T03:48:38.821Z"
+      "createdAt": "2026-11-01T07:37:40.973Z"
     }
   ],
   "projects": [
@@ -41,9 +41,9 @@
         "Sub-second Load Times"
       ],
       "placeholder": false,
-      "image": "/src/assets/Purulia.png",
+      "image": "/uploads/Purulia.png",
       "url": "https://puruliatravelsfinal.netlify.app/",
-      "githubUrl": "https://github.com/vyntra-tech/purulia-travels",
+      "githubUrl": "https://github.com/tavqen-tech/purulia-travels",
       "status": "published",
       "completionDate": "2026-02-15",
       "featured": true,
@@ -70,9 +70,9 @@
         "Interactive Menu Cards"
       ],
       "placeholder": false,
-      "image": "/src/assets/Hangry.png",
+      "image": "/uploads/Hangry.png",
       "url": "https://hangry-frontend-seven.vercel.app/",
-      "githubUrl": "https://github.com/vyntra-tech/hangry-app",
+      "githubUrl": "https://github.com/tavqen-tech/hangry-app",
       "status": "published",
       "completionDate": "2026-01-20",
       "featured": true,
@@ -100,9 +100,9 @@
         "Real-time Financial Telemetry"
       ],
       "placeholder": false,
-      "image": "/src/assets/UniBill-Photo.png",
+      "image": "/uploads/UniBill-Photo.png",
       "url": "https://unibillpro.devforge.in/",
-      "githubUrl": "https://github.com/vyntra-tech/unibill-pro",
+      "githubUrl": "https://github.com/tavqen-tech/unibill-pro",
       "status": "published",
       "completionDate": "2025-12-10",
       "featured": true,
@@ -129,9 +129,9 @@
         "Chef Specialties Showcase"
       ],
       "placeholder": false,
-      "image": "/src/assets/Namaste.png",
+      "image": "/uploads/Namaste.png",
       "url": "https://namatecafe.web.app/",
-      "githubUrl": "https://github.com/vyntra-tech/namaste-cafe",
+      "githubUrl": "https://github.com/tavqen-tech/namaste-cafe",
       "status": "published",
       "completionDate": "2025-11-28",
       "featured": true,
@@ -159,7 +159,7 @@
         "Audit Trail"
       ],
       "placeholder": false,
-      "image": "/uploads/1793286529445-mentorship_moment.jpg",
+      "image": "",
       "url": "",
       "githubUrl": "",
       "status": "draft",
@@ -167,7 +167,7 @@
       "featured": false,
       "order": 5,
       "createdAt": "2026-02-18T10:00:00.000Z",
-      "updatedAt": "2026-10-29T15:08:50.394Z"
+      "updatedAt": "2026-02-22T17:10:00.000Z"
     }
   ],
   "services": [
@@ -335,37 +335,14 @@
   ],
   "team": [
     {
-      "name": "Atul Baghel",
-      "role": "HR Operations Executive",
-      "initials": "AB",
-      "specialty": "Human Resources & Operations",
-      "bio": "Responsible for managing human resources, team coordination, recruitment operations, and organizational activities at TAVQEN Technologies. Focused on building a productive work environment, strengthening team collaboration, and supporting organizational growth.",
-      "skills": [
-        "HR",
-        "Management Recruitment",
-        "People Management",
-        "Team Coordination"
-      ],
-      "linkedin": "https://www.linkedin.com/in/atulbaghel/",
-      "github": "https://github.com/Atulbaghel7b7",
-      "portfolio": "",
-      "image": "/uploads/1793514496379-atul.jpg",
-      "size": "medium",
-      "status": "published",
-      "order": 1793514498180,
-      "id": "item-1793514498180-cd1761f2",
-      "createdAt": "2026-11-01T06:28:18.180Z",
-      "updatedAt": "2026-11-01T06:28:18.180Z"
-    },
-    {
       "id": "chandrabhan-gadeshwar",
       "name": "Chandrabhan Gadeshwar",
       "role": "Founder & CEO",
       "initials": "CG",
-      "image": "/src/assets/chandrabhan.jpg",
+      "image": "/uploads/chandrabhan.jpg",
       "imagePosition": "center 20%",
-      "specialty": "Web Architecture & Cloud Engineering",
-      "bio": "Pioneering modern distributed web architectures and cloud-native solutions with over 8 years of engineering leadership.",
+      "specialty": "Executive Leadership & Cloud Architecture",
+      "bio": "Pioneering modern distributed web architectures, executive leadership, and cloud-native solutions with over 8 years of engineering leadership.",
       "skills": [
         "Cloud Architecture",
         "React",
@@ -378,18 +355,17 @@
       "portfolio": "",
       "size": "large",
       "status": "published",
-      "order": 1,
-      "updatedAt": "2026-10-23T04:40:56.895Z"
+      "order": 1
     },
     {
       "id": "shubham-uprade",
       "name": "Shubham Uprade",
       "role": "Co-Founder & CTO",
       "initials": "SU",
-      "image": "/src/assets/shubham.jpg",
+      "image": "/uploads/shubham.jpg",
       "imagePosition": "center 12%",
-      "specialty": "Frontend Systems & UI/UX Design",
-      "bio": "Crafting fluid digital experiences, responsive design systems, and pixel-perfect high-fidelity web applications.",
+      "specialty": "Technology Strategy, Engineering & Systems Architecture",
+      "bio": "Directing technology strategy, scalable frontend/backend systems, high-performance architecture, and pixel-perfect digital experiences.",
       "skills": [
         "UI/UX Systems",
         "Figma",
@@ -402,15 +378,14 @@
       "portfolio": "",
       "size": "medium",
       "status": "published",
-      "order": 2,
-      "updatedAt": "2026-10-23T04:40:48.816Z"
+      "order": 2
     },
     {
       "id": "sanjay-sende",
       "name": "Sanjay Sende",
       "role": "Full Stack Developer",
       "initials": "SS",
-      "image": "/src/assets/sanju.jpg",
+      "image": "/uploads/sanju.jpg",
       "imagePosition": "center 20%",
       "specialty": "Digital Products & SaaS Development",
       "bio": "Architecting end-to-end full stack web platforms, real-time database models, and modern SaaS products.",
@@ -433,7 +408,7 @@
       "name": "Nikhil Waghade",
       "role": "Backend Systems Engineer",
       "initials": "NW",
-      "image": "/src/assets/nikhil.jpg",
+      "image": "/uploads/nikhil.jpg",
       "imagePosition": "center 15%",
       "specialty": "Backend Services & Database Architecture",
       "bio": "Specializing in resilient REST & GraphQL services, high-concurrency microservices, and secure API gateways.",
@@ -456,7 +431,7 @@
       "name": "Dharamchand Patle",
       "role": "AI Solutions Engineer",
       "initials": "DP",
-      "image": "/src/assets/dharam.png",
+      "image": "/uploads/dharam.png",
       "imagePosition": "center 18%",
       "specialty": "AI Solutions & Full Stack Systems",
       "bio": "Integrating LLM agents, vector databases, and cognitive workflow automation into enterprise digital products.",
@@ -475,83 +450,211 @@
       "order": 5
     }
   ],
-  "testimonials": [],
-  "products": [],
+  "testimonials": [
+    {
+      "id": "rev-1",
+      "name": "Aarav Sharma",
+      "role": "Founder",
+      "company": "Namaste Cafe",
+      "initials": "AS",
+      "rating": 5,
+      "review": "TAVQEN transformed our brand into an extraordinary digital experience. Online orders surged by 45% within the first month.",
+      "project": "Restaurant Digital Platform",
+      "tag": "Web Architecture",
+      "avatar": "",
+      "status": "published",
+      "order": 1
+    },
+    {
+      "id": "rev-2",
+      "name": "Priya Patel",
+      "role": "Head of Product",
+      "company": "UniBill Pro",
+      "initials": "PP",
+      "rating": 5,
+      "review": "They architected a scalable SaaS billing platform that easily handles tens of thousands of daily transactions with zero downtime.",
+      "project": "Billing SaaS Platform",
+      "tag": "SaaS Engineering",
+      "avatar": "",
+      "status": "published",
+      "order": 2
+    },
+    {
+      "id": "rev-3",
+      "name": "Rohan Deshmukh",
+      "role": "Managing Director",
+      "company": "Purulia Travels",
+      "initials": "RD",
+      "rating": 5,
+      "review": "The team delivered a modern, lightning-fast UI that our travelers love. Punctual, responsive, and reliable execution throughout.",
+      "project": "Travel & Tourism Portal",
+      "tag": "UI/UX & Frontend",
+      "avatar": "",
+      "status": "published",
+      "order": 3
+    },
+    {
+      "id": "rev-4",
+      "name": "Sneha Gupta",
+      "role": "Co-Founder",
+      "company": "Hangry Delivery",
+      "initials": "SG",
+      "rating": 5,
+      "review": "Engineered our MVP in record time with zero compromise on code quality. Their proactive approach gave us a real competitive edge.",
+      "project": "Food Delivery Platform",
+      "tag": "MVP Development",
+      "avatar": "",
+      "status": "published",
+      "order": 4
+    },
+    {
+      "id": "rev-5",
+      "name": "Vikram Malhotra",
+      "role": "CEO",
+      "company": "NexaFlow AI",
+      "initials": "VM",
+      "rating": 5,
+      "review": "Rare engineers who understand both cutting-edge AI integrations and pixel-perfect design. They act as true product partners.",
+      "project": "AI Workflow Automation",
+      "tag": "AI Solutions",
+      "avatar": "",
+      "status": "published",
+      "order": 5
+    },
+    {
+      "id": "rev-6",
+      "name": "Ananya Roy",
+      "role": "VP of Technology",
+      "company": "PayZenith",
+      "initials": "AR",
+      "rating": 5,
+      "review": "Elite engineering standards. From database optimization to fluid micro-animations, every single screen reflects excellence.",
+      "project": "Fintech Portal",
+      "tag": "Scalable Systems",
+      "avatar": "",
+      "status": "published",
+      "order": 6
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "TAVQEN Cloud",
+      "slug": "tavqen-cloud",
+      "category": "Cloud Platform & DevOps",
+      "status": "In Development",
+      "previewType": "cloud",
+      "description": "An AI-assisted platform for application deployment, cloud management, real-time deployment logs, and intelligent troubleshooting.",
+      "tech": [
+        "AI Diagnostics",
+        "Cloud Orchestration",
+        "Log Analytics",
+        "Kubernetes",
+        "Edge Runtime"
+      ],
+      "url": "",
+      "isPublic": true,
+      "order": 1
+    },
+    {
+      "id": "prod-2",
+      "name": "TAVQEN AI",
+      "slug": "tavqen-ai",
+      "category": "Intelligent Automation",
+      "status": "Planned",
+      "previewType": "ai",
+      "description": "AI-powered productivity tools and intelligent automation designed to streamline operations, workflows, and enterprise cognitive tasks.",
+      "tech": [
+        "Autonomous Agents",
+        "Neural Workflows",
+        "Task Automation",
+        "Python",
+        "FastAPI"
+      ],
+      "url": "",
+      "isPublic": true,
+      "order": 2
+    },
+    {
+      "id": "prod-3",
+      "name": "TAVQEN Studio",
+      "slug": "tavqen-studio",
+      "category": "Developer Ecosystem",
+      "status": "Planned",
+      "previewType": "studio",
+      "description": "AI-assisted website and application development tools empowering engineers and creators with generative scaffolds, components, and live preview environments.",
+      "tech": [
+        "Generative UI",
+        "Visual Builder",
+        "React",
+        "TypeScript",
+        "WebContainers"
+      ],
+      "url": "",
+      "isPublic": true,
+      "order": 3
+    }
+  ],
   "gallery": [
     {
-      "title": "Gallery 5",
-      "subtitle": "",
-      "category": "community",
-      "type": "image",
-      "image": "/uploads/1793513850683-Gallery_5.png",
-      "videoUrl": "",
-      "tag": "MEDIA UPLOAD",
-      "caption": "",
-      "alt": "Gallery 5.png",
-      "uploadedAt": "2026-11-01T06:17:31.959Z",
-      "id": "item-1793513851959-561b67c3",
-      "createdAt": "2026-11-01T06:17:31.992Z",
-      "updatedAt": "2026-11-01T06:17:31.992Z"
+      "id": "placement-story",
+      "title": "From Campus to Product Engineer",
+      "subtitle": "Placement & Career Journey",
+      "category": "story",
+      "type": "video",
+      "image": "/uploads/student_story.jpg",
+      "tag": "ANOTHER PLACEMENT FROM TAVQEN",
+      "caption": "Candid video interview sharing how hands-on coding transformed theoretical knowledge into production-ready software engineering.",
+      "alt": "Placement success story of a young engineer at TAVQEN",
+      "uploadedAt": "2026-01-10T11:00:00.000Z"
     },
     {
-      "title": "Gallary 4",
-      "subtitle": "",
-      "category": "community",
+      "id": "sprint-celebration",
+      "title": "Celebrating Sprint Milestones",
+      "subtitle": "Sweet moments with our developer cohort",
+      "category": "celebration",
       "type": "image",
-      "image": "/uploads/1793513703400-Gallary_4.png",
-      "videoUrl": "",
-      "tag": "MEDIA UPLOAD",
-      "caption": "",
-      "alt": "Gallary 4.png",
-      "uploadedAt": "2026-11-01T06:15:03.521Z",
-      "id": "item-1793513703521-c9679759",
-      "createdAt": "2026-11-01T06:15:03.522Z",
-      "updatedAt": "2026-11-01T06:15:03.522Z"
+      "image": "/uploads/team_celebration.jpg",
+      "tag": "MILESTONE CELEBRATIONS",
+      "caption": "Festive treats and shared laughter following a successful multi-tenant SaaS delivery sprint.",
+      "alt": "TAVQEN team celebrating sprint milestone with festive sweets in modern office",
+      "uploadedAt": "2026-01-18T16:30:00.000Z"
     },
     {
-      "title": "Gallery 3",
-      "subtitle": "",
+      "id": "founders-studio",
+      "title": "Collaborative Innovation",
+      "subtitle": "Lead Architects in the Studio",
       "category": "community",
       "type": "image",
-      "image": "/uploads/1793513409413-Gallery_3.png",
-      "videoUrl": "",
-      "tag": "MEDIA UPLOAD",
-      "caption": "",
-      "alt": "Gallery 3.png",
-      "uploadedAt": "2026-11-01T06:10:12.967Z",
-      "id": "item-1793513412967-bcd55f30",
-      "createdAt": "2026-11-01T06:10:12.970Z",
-      "updatedAt": "2026-11-01T06:10:12.970Z"
+      "image": "/uploads/founders_duo.jpg",
+      "tag": "STUDIO LIFE",
+      "caption": "Daily standup and architecture brainstorm session in the startup tech bay.",
+      "alt": "TAVQEN engineers smiling in front of creative tech workspace",
+      "uploadedAt": "2026-01-22T09:15:00.000Z"
     },
     {
-      "title": "Gallary 2",
-      "subtitle": "",
-      "category": "community",
+      "id": "mentorship-moment",
+      "title": "Mentorship & Recognition",
+      "subtitle": "Pair programming and mutual wins",
+      "category": "mentorship",
       "type": "image",
-      "image": "/uploads/1793513289733-Gallary_2.png",
-      "videoUrl": "",
-      "tag": "MEDIA UPLOAD",
-      "caption": "",
-      "alt": "Gallary 2.png",
-      "uploadedAt": "2026-11-01T06:08:10.670Z",
-      "id": "item-1793513290670-a9969037",
-      "createdAt": "2026-11-01T06:08:10.670Z",
-      "updatedAt": "2026-11-01T06:08:10.670Z"
+      "image": "/uploads/mentorship_moment.jpg",
+      "tag": "PEER MENTORSHIP",
+      "caption": "Celebrating personal growth, code reviews, and project breakthroughs together.",
+      "alt": "Engineers celebrating mentorship achievement with coffee and cake",
+      "uploadedAt": "2026-02-05T14:00:00.000Z"
     },
     {
-      "title": "Gallary 1",
-      "subtitle": "",
+      "id": "community-cohort",
+      "title": "The TAVQEN Developer Family",
+      "subtitle": "Builders, engineers, and creators united",
       "category": "community",
       "type": "image",
-      "image": "/uploads/1793513282270-Gallary_1.png",
-      "videoUrl": "",
-      "tag": "MEDIA UPLOAD",
-      "caption": "",
-      "alt": "Gallary 1.png",
-      "uploadedAt": "2026-11-01T06:08:02.698Z",
-      "id": "item-1793513282698-672325d4",
-      "createdAt": "2026-11-01T06:08:02.698Z",
-      "updatedAt": "2026-11-01T06:08:02.698Z"
+      "image": "/uploads/community_group.jpg",
+      "tag": "COMMUNITY & COHORT",
+      "caption": "A united collective of builders pushing boundaries and shipping modern software products together.",
+      "alt": "TAVQEN engineering community cohort standing together smiling in office",
+      "uploadedAt": "2026-02-12T18:00:00.000Z"
     }
   ],
   "content": {
@@ -565,7 +668,7 @@
       "secondaryCtaUrl": "#contact"
     },
     "about": {
-      "label": "ABOUT TAVQEN ",
+      "label": "ABOUT TAVQEN",
       "heading": "We Build Digital Products That Matter.",
       "description": "TAVQEN Technologies helps startups and enterprises build modern web applications, scalable cloud solutions, and AI-powered software through thoughtful design and reliable engineering.",
       "stats": [
@@ -587,35 +690,23 @@
       "video": {
         "src": "/uploads/about-vedeio.mp4",
         "poster": "",
-        "caption": "Meet VYNTRA"
+        "caption": "Meet TAVQEN"
       }
     },
     "vision": {
-      "heading": "Engineering a Smarter, More Connected Digital Future.",
-      "statement": "Our mission is to empower businesses with innovative technology, intelligent software solutions, and scalable digital products. We eliminate technical complexity through quality engineering, enabling ambitious ideas to evolve into impactful solutions and sustainable growth."
+      "heading": "Engineered for Velocity. Built for Scale.",
+      "statement": "Our mission is to eliminate technical friction, giving ambitious founders the architectural edge to innovate, deploy, and dominate their category."
     },
     "seo": {
-      "title": "TAVQEN Technologies | Software Development, AI & Cloud Solutions",
-      "description": "TAVQEN Technologies delivers innovative software development, web and mobile applications, AI-powered solutions, and cloud engineering services to help businesses innovate, scale, and grow.",
-      "keywords": "TAVQEN Technologies, Software Development Company, Web Development, Mobile App Development, AI Solutions, Custom Software Development, Cloud Computing, DevOps Services, UI UX Design, Digital Transformation, SaaS Product Development, Technology Solutions",
-      "ogTitle": "TAVQEN Technologies – Engineering the Future of Digital Innovation",
-      "ogDescription": "Transform ambitious ideas into powerful digital solutions. Discover innovative software, AI, cloud, and technology services engineered to accelerate business growth and shape the future.",
-      "ogImage": "/og-image.png"
+      "title": "TAVQEN Technologies | Build. Deploy. Scale. | Software, AI & Cloud",
+      "description": "TAVQEN Technologies builds AI-powered software, next-generation cloud solutions, and developer automation tools. Build. Deploy. Scale.",
+      "keywords": "software development, AI solutions, cloud infrastructure, SaaS development, React, Node.js, TAVQEN",
+      "ogTitle": "TAVQEN Technologies",
+      "ogDescription": "Build. Deploy. Scale. We turn ambitious ideas into digital reality.",
+      "ogImage": "/TAVQEN_logo.jpeg"
     }
   },
   "messages": [
-    {
-      "name": "Shubham Uprade",
-      "email": "shubhamuprade0@gmail.com",
-      "company": "",
-      "type": "Software or website",
-      "budget": "₹25,000–₹50,000",
-      "description": "[Mobile: +919977413362]\n[Service: Website Development]\n[Budget: ₹25,000–₹50,000]\n--- Project Requirements ---\nhi i am shubham uprade",
-      "status": "read",
-      "id": "item-1792752109462-46d2a5ac",
-      "createdAt": "2026-10-23T10:41:49.463Z",
-      "updatedAt": "2026-10-24T05:59:03.945Z"
-    },
     {
       "id": "msg-seed-1",
       "name": "Aarav Mehta",
@@ -624,9 +715,8 @@
       "type": "AI or automation",
       "budget": "₹50,000–₹1,00,000",
       "description": "We are looking to implement an AI copilot into our financial reconciliation system. Needs high security and low latency.",
-      "status": "read",
-      "createdAt": "2026-02-22T08:14:00.000Z",
-      "updatedAt": "2026-10-23T04:39:08.366Z"
+      "status": "unread",
+      "createdAt": "2026-02-22T08:14:00.000Z"
     },
     {
       "id": "msg-seed-2",
@@ -642,853 +732,12 @@
   ],
   "activity": [
     {
-<<<<<<< HEAD
-      "id": "act-1793515514006-c8377a",
-      "actor": "TAVQEN Technologies (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-11-01T06:45:14.007Z"
-    },
-    {
-      "id": "act-1793514498218-132ce1",
-      "actor": "TAVQEN Technologies",
-      "action": "TEAM_MEMBER_ADDED",
-      "target": "Team: Atul Baghel",
-      "details": "Role: HR Operations Executive",
-      "timestamp": "2026-11-01T06:28:18.219Z"
-    },
-    {
-      "id": "act-1793514496459-8a1b04",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793514496379-atul.jpg",
-      "details": "30.5 KB",
-      "timestamp": "2026-11-01T06:28:16.461Z"
-    },
-    {
-      "id": "act-1793513852230-a9db10",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Gallery 5",
-      "details": "Type: image",
-      "timestamp": "2026-11-01T06:17:32.231Z"
-    },
-    {
-      "id": "act-1793513850746-05ce38",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793513850683-Gallery_5.png",
-      "details": "2070.7 KB",
-      "timestamp": "2026-11-01T06:17:30.751Z"
-    },
-    {
-      "id": "act-1793513703528-8a34bd",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Gallary 4",
-      "details": "Type: image",
-      "timestamp": "2026-11-01T06:15:03.528Z"
-    },
-    {
-      "id": "act-1793513703416-5eed1e",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793513703400-Gallary_4.png",
-      "details": "1898.4 KB",
-      "timestamp": "2026-11-01T06:15:03.416Z"
-    },
-    {
-      "id": "act-1793513413397-3cbfee",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Gallery 3",
-      "details": "Type: image",
-      "timestamp": "2026-11-01T06:10:13.398Z"
-    },
-    {
-      "id": "act-1793513409496-0faadc",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793513409413-Gallery_3.png",
-      "details": "1833.4 KB",
-      "timestamp": "2026-11-01T06:10:09.502Z"
-    },
-    {
-      "id": "act-1793513290695-1f5952",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Gallary 2",
-      "details": "Type: image",
-      "timestamp": "2026-11-01T06:08:10.696Z"
-    },
-    {
-      "id": "act-1793513289751-ea7fce",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793513289733-Gallary_2.png",
-      "details": "1874.8 KB",
-      "timestamp": "2026-11-01T06:08:09.751Z"
-    },
-    {
-      "id": "act-1793513282727-0673c8",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Gallary 1",
-      "details": "Type: image",
-      "timestamp": "2026-11-01T06:08:02.727Z"
-    },
-    {
-      "id": "act-1793513282415-99472a",
-      "actor": "TAVQEN Technologies",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793513282270-Gallary_1.png",
-      "details": "1986.5 KB",
-      "timestamp": "2026-11-01T06:08:02.416Z"
-    },
-    {
-      "id": "act-1793512953137-d2c7a0",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244153387-49e8e4c4",
-      "details": "Deleted media",
-      "timestamp": "2026-11-01T06:02:33.137Z"
-    },
-    {
-      "id": "act-1793512950068-2bddb6",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244226320-e2df4d97",
-      "details": "Deleted media",
-      "timestamp": "2026-11-01T06:02:30.068Z"
-    },
-    {
-      "id": "act-1793512946886-05b15f",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244304659-d4434300",
-      "details": "Deleted media",
-      "timestamp": "2026-11-01T06:02:26.887Z"
-    },
-    {
-      "id": "act-1793512943319-32b42b",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244525723-7304b129",
-      "details": "Deleted media",
-      "timestamp": "2026-11-01T06:02:23.319Z"
-    },
-    {
-      "id": "act-1793512940126-54a68e",
-      "actor": "TAVQEN Technologies",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244442787-5626da3a",
-      "details": "Deleted media",
-      "timestamp": "2026-11-01T06:02:20.126Z"
-    },
-    {
-      "id": "act-1793512922671-bd3628",
-      "actor": "TAVQEN Technologies",
-      "action": "PRODUCT_DELETED",
-      "target": "Product ID: prod-1",
-      "details": "Deleted product",
-      "timestamp": "2026-11-01T06:02:02.671Z"
-    },
-    {
-      "id": "act-1793512919021-c485e4",
-      "actor": "TAVQEN Technologies",
-      "action": "PRODUCT_DELETED",
-      "target": "Product ID: prod-2",
-      "details": "Deleted product",
-      "timestamp": "2026-11-01T06:01:59.021Z"
-    },
-    {
-      "id": "act-1793512913153-382842",
-      "actor": "TAVQEN Technologies",
-      "action": "PRODUCT_DELETED",
-      "target": "Product ID: prod-3",
-      "details": "Deleted product",
-      "timestamp": "2026-11-01T06:01:53.153Z"
-    },
-    {
-      "id": "act-1793512893113-63869b",
-      "actor": "TAVQEN Technologies (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-11-01T06:01:33.118Z"
-    },
-    {
-      "id": "act-1793510457137-150922",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "SETTINGS_UPDATED",
-      "target": "Global Settings",
-      "details": "Updated site configuration",
-      "timestamp": "2026-11-01T05:20:57.140Z"
-    },
-    {
-      "id": "act-1793510378733-39903d",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-11-01T05:19:38.733Z"
-    },
-    {
-      "id": "act-1793510277053-d894a7",
-      "actor": "Editorial Team (editor@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as editor",
-      "timestamp": "2026-11-01T05:17:57.053Z"
-    },
-    {
-      "id": "act-1793509887753-5ab7e7",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-11-01T05:11:27.758Z"
-    },
-    {
-      "id": "act-1793509797202-9cf74e",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-11-01T05:09:57.203Z"
-    },
-    {
-      "id": "act-1793509595882-be13db",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-11-01T05:06:35.883Z"
-    },
-    {
-      "id": "act-1793509546006-1b5881",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-11-01T05:05:46.013Z"
-    },
-    {
-      "id": "act-1793509317824-5168bd",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-11-01T05:01:57.828Z"
-    },
-    {
-      "id": "act-1793286530421-d8c49a",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "PROJECT_UPDATED",
-      "target": "Project: CogniPulse AI Platform",
-      "details": "Updated details",
-      "timestamp": "2026-10-29T15:08:50.421Z"
-    },
-    {
-      "id": "act-1793286529507-b9699d",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793286529445-mentorship_moment.jpg",
-      "details": "790.3 KB",
-      "timestamp": "2026-10-29T15:08:49.512Z"
-=======
-      "id": "act-1793279695294-63b677",
-      "actor": "Chandrabhan Gadeshwar (admin@vyntra.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-29T13:14:55.294Z"
->>>>>>> 17bc373b0871c002bb52ad8771c5a6d1dcc05136
-    },
-    {
-      "id": "act-1793244525729-bcc490",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Solutions_ Innovation in Motion",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:28:45.729Z"
-    },
-    {
-      "id": "act-1793244525549-b9bdf1",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244525543-Vyntra_Solutions__Innovation_in_Motion.png",
-      "details": "2200.9 KB",
-      "timestamp": "2026-10-29T03:28:45.549Z"
-    },
-    {
-      "id": "act-1793244442793-bb34bb",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Solutions Team Celebration",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:27:22.793Z"
-    },
-    {
-      "id": "act-1793244442502-525490",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244442493-Vyntra_Solutions_Team_Celebration.png",
-      "details": "2377.1 KB",
-      "timestamp": "2026-10-29T03:27:22.502Z"
-    },
-    {
-      "id": "act-1793244336775-f6485b",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1793244292568-53d1bb6d",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:25:36.775Z"
-    },
-    {
-      "id": "act-1793244304668-f00654",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Team Brainstorming Session-2",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:25:04.669Z"
-    },
-    {
-      "id": "act-1793244304365-2e9741",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244304359-Vyntra_Team_Brainstorming_Session-2.png",
-      "details": "2059.6 KB",
-      "timestamp": "2026-10-29T03:25:04.365Z"
-    },
-    {
-      "id": "act-1793244292572-b9f963",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Team Brainstorming Session-2",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:24:52.572Z"
-    },
-    {
-      "id": "act-1793244292384-8695a1",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244292375-Vyntra_Team_Brainstorming_Session-2.png",
-      "details": "2059.6 KB",
-      "timestamp": "2026-10-29T03:24:52.384Z"
-    },
-    {
-      "id": "act-1793244226324-157ba9",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Solutions Team Collaboration",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:23:46.324Z"
-    },
-    {
-      "id": "act-1793244226186-efc713",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244226177-Vyntra_Solutions_Team_Collaboration.png",
-      "details": "2087.6 KB",
-      "timestamp": "2026-10-29T03:23:46.186Z"
-    },
-    {
-      "id": "act-1793244153390-47dc33",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: Vyntra Solutions Modern Office",
-      "details": "Type: image",
-      "timestamp": "2026-10-29T03:22:33.390Z"
-    },
-    {
-      "id": "act-1793244153215-ce44e7",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1793244153208-Vyntra_Solutions_Modern_Office.png",
-      "details": "2145.8 KB",
-      "timestamp": "2026-10-29T03:22:33.216Z"
-    },
-    {
-      "id": "act-1793243959678-f8dc40",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: community-cohort",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:19:19.678Z"
-    },
-    {
-      "id": "act-1793243956610-50c34f",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: founders-studio",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:19:16.611Z"
-    },
-    {
-      "id": "act-1793243953656-6be2d0",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: mentorship-moment",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:19:13.656Z"
-    },
-    {
-      "id": "act-1793243950742-0bb2c8",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: sprint-celebration",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:19:10.742Z"
-    },
-    {
-      "id": "act-1793243946060-bfd1e0",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: placement-story",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:19:06.061Z"
-    },
-    {
-      "id": "act-1793243932454-3fc5e0",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1792732203692-0f2dad49",
-      "details": "Deleted media",
-      "timestamp": "2026-10-29T03:18:52.455Z"
-    },
-    {
-      "id": "act-1793243886891-696748",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-6",
-      "details": "Deleted review",
-      "timestamp": "2026-10-29T03:18:06.891Z"
-    },
-    {
-      "id": "act-1793243167222-2dd308",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-5",
-      "details": "Deleted review",
-      "timestamp": "2026-10-29T03:06:07.222Z"
-    },
-    {
-      "id": "act-1793243162687-4a9e3a",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-4",
-      "details": "Deleted review",
-      "timestamp": "2026-10-29T03:06:02.687Z"
-    },
-    {
-      "id": "act-1793243159837-bbfb72",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-3",
-      "details": "Deleted review",
-      "timestamp": "2026-10-29T03:05:59.837Z"
-    },
-    {
-      "id": "act-1793243156704-df5907",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-2",
-      "details": "Deleted review",
-      "timestamp": "2026-10-29T03:05:56.704Z"
-    },
-    {
-      "id": "act-1793243127718-0def7a",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-29T03:05:27.719Z"
-    },
-    {
-      "id": "act-1793242029444-c82820",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-10-29T02:47:09.448Z"
-    },
-    {
-      "id": "act-1793241971019-feb9fc",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-29T02:46:11.020Z"
-    },
-    {
-      "id": "act-1793241381991-f660bc",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "CONTENT_UPDATED",
-      "target": "Website Content",
-      "details": "Updated CMS sections",
-      "timestamp": "2026-10-29T02:36:21.992Z"
-    },
-    {
-      "id": "act-1793241302537-77d2fe",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-29T02:35:02.537Z"
-    },
-    {
-      "id": "act-1793199352612-833519",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-28T14:55:52.612Z"
-    },
-    {
-      "id": "act-1792821415367-ca623c",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-24T05:56:55.370Z"
-    },
-    {
-      "id": "act-1792752109467-a48ac4",
-      "actor": "Visitor (shubhamuprade0@gmail.com)",
-      "action": "CONTACT_FORM_SUBMISSION",
-      "target": "Inquiry: Software or website",
-      "details": "Company: N/A",
-      "timestamp": "2026-10-23T10:41:49.468Z"
-    },
-    {
-      "id": "act-1792733756192-db0118",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T05:35:56.192Z"
-    },
-    {
-      "id": "act-1792733445947-d2179f",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792733445946-profile-picture.png",
-      "details": "0.1 KB",
-      "timestamp": "2026-10-23T05:30:45.947Z"
-    },
-    {
-      "id": "act-1792733445879-8399af",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T05:30:45.879Z"
-    },
-    {
-      "id": "act-1792732824312-3bc1aa",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792732824308-large-image_png.png",
-      "details": "3072.0 KB",
-      "timestamp": "2026-10-23T05:20:24.312Z"
-    },
-    {
-      "id": "act-1792732824200-85de68",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792732824183-test-photo_jpg.jpg",
-      "details": "0.1 KB",
-      "timestamp": "2026-10-23T05:20:24.200Z"
-    },
-    {
-      "id": "act-1792732824115-ca1927",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792732824114-test-icon_png.png",
-      "details": "0.1 KB",
-      "timestamp": "2026-10-23T05:20:24.115Z"
-    },
-    {
-      "id": "act-1792732824038-503392",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T05:20:24.038Z"
-    },
-    {
-      "id": "act-1792732203799-199cc9",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: shubham",
-      "details": "Type: image",
-      "timestamp": "2026-10-23T05:10:03.806Z"
-    },
-    {
-      "id": "act-1792732201007-e7ef6d",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792732195458-shubham_jpg.jpg",
-      "details": "118.9 KB",
-      "timestamp": "2026-10-23T05:10:01.009Z"
-    },
-    {
-      "id": "act-1792732112592-5f03c5",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T05:08:32.593Z"
-    },
-    {
-      "id": "act-1792731179227-8b0e79",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:52:59.228Z"
-    },
-    {
-      "id": "act-1792730456898-8afc18",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TEAM_MEMBER_UPDATED",
-      "target": "Team: Chandrabhan Gadeshwar",
-      "details": "Updated details",
-      "timestamp": "2026-10-23T04:40:56.898Z"
-    },
-    {
-      "id": "act-1792730448819-51349a",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TEAM_MEMBER_UPDATED",
-      "target": "Team: Shubham Uprade",
-      "details": "Updated details",
-      "timestamp": "2026-10-23T04:40:48.819Z"
-    },
-    {
-      "id": "act-1792730396707-9c8eb2",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "TESTIMONIAL_DELETED",
-      "target": "Testimonial ID: rev-1",
-      "details": "Deleted review",
-      "timestamp": "2026-10-23T04:39:56.707Z"
-    },
-    {
-      "id": "act-1792730390146-7fe60f",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1792730384409-f1133954",
-      "details": "Deleted media",
-      "timestamp": "2026-10-23T04:39:50.146Z"
-    },
-    {
-      "id": "act-1792730384413-4d6f2e",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: shubham",
-      "details": "Type: image",
-      "timestamp": "2026-10-23T04:39:44.413Z"
-    },
-    {
-      "id": "act-1792730384160-532971",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792730384106-shubham_jpg.jpg",
-      "details": "118.9 KB",
-      "timestamp": "2026-10-23T04:39:44.160Z"
-    },
-    {
-      "id": "act-1792730378066-a5ca06",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_DELETED",
-      "target": "Media ID: item-1792730372453-b8e2b7f9",
-      "details": "Deleted media",
-      "timestamp": "2026-10-23T04:39:38.073Z"
-    },
-    {
-      "id": "act-1792730372457-090df8",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "GALLERY_ITEM_ADDED",
-      "target": "Media: chandrabhan",
-      "details": "Type: image",
-      "timestamp": "2026-10-23T04:39:32.457Z"
-    },
-    {
-      "id": "act-1792730372370-480cf8",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "MEDIA_UPLOADED",
-      "target": "File: 1792730372327-chandrabhan_jpg.jpg",
-      "details": "54.6 KB",
-      "timestamp": "2026-10-23T04:39:32.370Z"
-    },
-    {
-      "id": "act-1792730341105-883fbe",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "SETTINGS_UPDATED",
-      "target": "Global Settings",
-      "details": "Updated site configuration",
-      "timestamp": "2026-10-23T04:39:01.105Z"
-    },
-    {
-      "id": "act-1792730312005-a087e9",
-      "actor": "Chandrabhan Gadeshwar",
-      "action": "SETTINGS_UPDATED",
-      "target": "Global Settings",
-      "details": "Updated site configuration",
-      "timestamp": "2026-10-23T04:38:32.005Z"
-    },
-    {
-      "id": "act-1792730275055-a61f5a",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:37:55.056Z"
-    },
-    {
-      "id": "act-1792729818662-1d80ec",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:30:18.662Z"
-    },
-    {
-      "id": "act-1792729791158-c04b21",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:29:51.158Z"
-    },
-    {
-      "id": "act-1792729745547-48092b",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:29:05.547Z"
-    },
-    {
-      "id": "act-1792729670405-8c686b",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:27:50.405Z"
-    },
-    {
-      "id": "act-1792729624631-be2149",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:27:04.632Z"
-    },
-    {
-      "id": "act-1792729123576-2e439b",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:18:43.576Z"
-    },
-    {
-      "id": "act-1792729109172-624930",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:18:29.172Z"
-    },
-    {
-      "id": "act-1792729051601-58a9b8",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:17:31.601Z"
-    },
-    {
-      "id": "act-1792728940253-6c9fd0",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:15:40.254Z"
-    },
-    {
-      "id": "act-1792728812019-d0999d",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T04:13:32.020Z"
-    },
-    {
-      "id": "act-1792727725989-8a7389",
-      "actor": "Editorial Team (editor@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as editor",
-      "timestamp": "2026-10-23T03:55:25.989Z"
-    },
-    {
-      "id": "act-1792727645079-e9f7d4",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:54:05.079Z"
-    },
-    {
-      "id": "act-1792727626570-b1c457",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:53:46.571Z"
-    },
-    {
-      "id": "act-1792727617445-afc75a",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:53:37.445Z"
-    },
-    {
-      "id": "act-1792727612213-da2778",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:53:32.213Z"
-    },
-    {
-      "id": "act-1792727373572-666378",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:49:33.572Z"
-    },
-    {
-      "id": "act-1792727368105-b3a792",
-      "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
-      "action": "AUTH_LOGIN",
-      "target": "Admin Portal",
-      "details": "Logged in as admin",
-      "timestamp": "2026-10-23T03:49:28.105Z"
-    },
-    {
       "id": "act-1",
       "actor": "Chandrabhan Gadeshwar (admin@tavqen.tech)",
       "action": "SYSTEM_INITIALIZED",
-      "target": "VYNTRA Admin Engine",
+      "target": "TAVQEN Admin Engine",
       "details": "Initialized database and seeded starter modules",
-      "timestamp": "2026-10-23T03:48:38.821Z"
+      "timestamp": "2026-11-01T07:37:40.973Z"
     },
     {
       "id": "act-2",
@@ -1496,29 +745,29 @@
       "action": "PROJECT_PUBLISHED",
       "target": "Purulia Travels",
       "details": "Published modern travel platform portfolio piece",
-      "timestamp": "2026-10-23T01:48:38.821Z"
+      "timestamp": "2026-11-01T05:37:40.973Z"
     }
   ],
   "settings": {
     "siteName": "TAVQEN Technologies",
-    "tagline": "Transforming Ideas Into Powerful Digital Solutions.",
+    "tagline": "Build. Deploy. Scale.",
     "contactEmail": "contact@tavqen.tech",
     "supportEmail": "support@tavqen.tech",
-    "phone": "+91 9977413362",
+    "phone": "+91 98765 43210",
     "whatsapp": "+91 98765 43210",
-    "address": "Inodre Madhya Pradesh",
+    "address": "Nagpur & Pune, Maharashtra, India",
     "socials": [
       {
         "label": "LinkedIn",
-        "url": "https://linkedin.com/company/vyntra-tech"
+        "url": "https://linkedin.com/company/tavqen-tech"
       },
       {
         "label": "GitHub",
-        "url": "https://github.com/vyntra-tech"
+        "url": "https://github.com/tavqen-tech"
       },
       {
         "label": "Twitter / X",
-        "url": "https://twitter.com/vyntra_tech"
+        "url": "https://twitter.com/tavqen_tech"
       }
     ],
     "privacyUrl": "/privacy",

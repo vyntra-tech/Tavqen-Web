@@ -667,7 +667,7 @@ app.post('/api/admin/gallery', authenticateToken, (req, res) => {
     type: type || 'image',
     image: image || '',
     videoUrl: videoUrl || '',
-    tag: tag || 'VYNTRA',
+    tag: tag || 'TAVQEN',
     caption: caption || '',
     alt: alt || title,
     uploadedAt: new Date().toISOString()
@@ -915,6 +915,6 @@ app.get('*', (req, res, next) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`🚀 VYNTRA API & Admin Engine listening on http://localhost:${PORT}`)
+  console.log(`🚀 TAVQEN API & Admin Engine listening on http://localhost:${PORT}`)
   console.log(`📡 Mail status: ${configured ? 'Configured' : 'Local Mock Mode'}`)
 })

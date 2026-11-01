@@ -280,7 +280,7 @@ const GalleryItemSchema = new Schema<IGalleryItem>(
     type: { type: String, enum: ['image', 'video', 'stat'], default: 'image' },
     image: { type: String, default: '' },
     videoUrl: { type: String, default: '' },
-    tag: { type: String, default: 'VYNTRA' },
+    tag: { type: String, default: 'TAVQEN' },
     caption: { type: String, default: '' },
     statNumber: { type: String, default: '' },
     statUnit: { type: String, default: '' },

@@ -2,24 +2,24 @@ import { useState, useRef, useEffect } from 'react'
 import { ArrowRight, Play, Pause, Volume2, VolumeX, Maximize2 } from 'lucide-react'
 import { useContent } from '../context/ContentContext'
 import { getImageUrl } from '../lib/image'
-import vyntraLogo from '../assets/vyntra-logo.png'
+import tavqenFav from '../assets/TAVQEN_fav.png'
 
 
 export default function About() {
   const { content } = useContent()
   const about = content?.about
 
-  const label = about?.label || 'ABOUT VYNTRA'
+  const label = about?.label || 'ABOUT TAVQEN'
   const heading = about?.heading || 'We Build Digital Products That Matter.'
   const description =
     about?.description ||
-    'VYNTRA Solutions helps startups and enterprises build modern web applications, scalable cloud solutions, and AI-powered software through thoughtful design and reliable engineering.'
+    'TAVQEN Technologies helps startups and enterprises build modern web applications, scalable cloud solutions, and AI-powered software through thoughtful design and reliable engineering.'
   const stats = about?.stats || []
   const ctaText = about?.ctaText || "Let's Talk"
   const ctaHref = about?.ctaHref || '#contact'
   const videoSrc = getImageUrl(about?.video?.src) || '/uploads/about-vedeio.mp4'
   const videoPoster = getImageUrl(about?.video?.poster)
-  const videoCaption = about?.video?.caption || 'Meet VYNTRA'
+  const videoCaption = about?.video?.caption || 'Meet TAVQEN'
 
   const [isPlaying, setIsPlaying] = useState(true)
   const [isMuted, setIsMuted] = useState(true)
@@ -40,7 +40,7 @@ export default function About() {
       videoRef.current
         .play()
         .then(() => setIsPlaying(true))
-        .catch(() => {})
+        .catch(() => { })
     } else {
       videoRef.current.pause()
       setIsPlaying(false)
@@ -59,9 +59,9 @@ export default function About() {
     e?.stopPropagation()
     if (!videoRef.current) return
     if (document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {})
+      document.exitFullscreen().catch(() => { })
     } else {
-      videoRef.current.requestFullscreen().catch(() => {})
+      videoRef.current.requestFullscreen().catch(() => { })
     }
   }
 
@@ -69,7 +69,7 @@ export default function About() {
     <section id="about" className="about-sec">
       <div className="wrap">
         <div className="about-bento-grid rv">
-          {/* 1. Left Section — About VYNTRA */}
+          {/* 1. Left Section — About TAVQEN */}
           <div className="about-left-col">
             <div className="about-eyebrow-pill">
               <span className="about-pill-dot" aria-hidden="true" />
@@ -128,17 +128,17 @@ export default function About() {
                     <div className="about-video-brand-wrap" aria-hidden="true">
                       <div className="about-video-emblem" style={{ background: 'transparent', border: 'none' }}>
                         <img
-                          src={vyntraLogo}
-                          alt="VYNTRA"
+                          src={tavqenFav}
+                          alt="TAVQEN"
                           style={{
-                            width: '38px',
-                            height: '38px',
+                            width: '36px',
+                            height: '36px',
                             objectFit: 'contain',
-                            filter: 'drop-shadow(0 4px 14px rgba(124, 58, 237, 0.6))',
+                            filter: 'drop-shadow(0 2px 10px rgba(0, 217, 255, 0.6))',
                           }}
                         />
                       </div>
-                      <span className="about-video-wordmark">VYNTRA</span>
+                      <span className="about-video-wordmark">TAVQEN</span>
                     </div>
 
                     {/* Centered Pause/Play overlay when paused */}
@@ -208,17 +208,17 @@ export default function About() {
                     <div className="about-video-brand-wrap" aria-hidden="true">
                       <div className="about-video-emblem" style={{ background: 'transparent', border: 'none' }}>
                         <img
-                          src={vyntraLogo}
-                          alt="VYNTRA"
+                          src={tavqenFav}
+                          alt="TAVQEN"
                           style={{
-                            width: '42px',
-                            height: '42px',
+                            width: '40px',
+                            height: '40px',
                             objectFit: 'contain',
-                            filter: 'drop-shadow(0 4px 14px rgba(124, 58, 237, 0.6))',
+                            filter: 'drop-shadow(0 2px 10px rgba(0, 217, 255, 0.6))',
                           }}
                         />
                       </div>
-                      <span className="about-video-wordmark">VYNTRA</span>
+                      <span className="about-video-wordmark">TAVQEN</span>
                     </div>
                     <div className="about-video-hint" role="status" aria-live="polite">
                       <span>Video source configurable in Admin Content CMS</span>

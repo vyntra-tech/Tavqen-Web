@@ -15,7 +15,7 @@ export default function Hero() {
   const hero = content?.hero
   const tagline = hero?.tagline || 'Build. Deploy. Scale. · AI, Cloud & Software'
   const title = hero?.title || 'We turn ideas into digital experiences.'
-  const subtitle = hero?.subtitle || 'From custom software, AI-powered solutions, and cloud architectures to scalable digital products, VYNTRA Solutions helps businesses transform ideas into meaningful technology.'
+  const subtitle = hero?.subtitle || 'From custom software, AI-powered solutions, and cloud architectures to scalable digital products, TAVQEN Technologies helps businesses transform ideas into meaningful technology.'
   const primaryCtaLabel = hero?.primaryCtaLabel || 'Explore Our Work'
   const primaryCtaUrl = hero?.primaryCtaUrl || '#work'
   const secondaryCtaLabel = hero?.secondaryCtaLabel || 'Start a Project'

@@ -165,7 +165,7 @@ export function ProductsPage() {
         <Box>
           <HStack spacing={2} mb={1}>
             <Heading size="lg" fontFamily="heading" color="white">
-              VYNTRA Product Ecosystem
+              TAVQEN Product Ecosystem
             </Heading>
             <Badge colorScheme="purple" borderRadius="full" px={2}>
               {products.length}
@@ -276,7 +276,7 @@ export function ProductsPage() {
                 <Input
                   value={formData.name || ''}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. VYNTRA Cloud"
+                  placeholder="e.g. TAVQEN Cloud"
                 />
               </FormControl>
 

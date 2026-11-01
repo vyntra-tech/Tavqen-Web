@@ -153,7 +153,7 @@ export default function Gallery() {
             <Sparkles size={14} className="gallery-sparkle" />
             <span>MOMENTS & MILESTONES</span>
           </div>
-          <Split>Life at VYNTRA — Stories, Wins & Celebrations</Split>
+          <Split>Life at TAVQEN — Stories, Wins & Celebrations</Split>
           <p className="lead" style={{ marginTop: '0.85rem' }}>
             From late-night code sprints and student career breakthroughs to sweet milestone celebrations. Here is a glimpse of our culture and community.
           </p>
@@ -230,7 +230,7 @@ export default function Gallery() {
                     <div className="stat-card-grid-pattern" aria-hidden="true" />
                     <div className="stat-card-glow" aria-hidden="true" />
                     <div className="stat-card-content">
-                      <span className="stat-card-badge">{item.tag || 'VYNTRA IMPACT'}</span>
+                      <span className="stat-card-badge">{item.tag || 'TAVQEN IMPACT'}</span>
                       <div className="stat-card-main-number">
                         <span className="stat-huge-number">{item.statNumber}</span>
                         <span className="stat-huge-unit">{item.statUnit}</span>

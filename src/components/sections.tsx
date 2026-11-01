@@ -149,7 +149,7 @@ export function Vision() {
   const vision = content?.vision
 
   const heading = vision?.heading || 'Engineering intelligence, cloud resilience, and developer velocity.'
-  const statement = vision?.statement || 'At VYNTRA Solutions, we believe the next era of digital systems must be autonomous, cloud-native, and developer-empowered. We focus our core engineering on three transformative pillars:'
+  const statement = vision?.statement || 'At TAVQEN Technologies, we believe the next era of digital systems must be autonomous, cloud-native, and developer-empowered. We focus our core engineering on three transformative pillars:'
 
   return (
     <Sec id="vision">
@@ -210,7 +210,7 @@ export function Vision() {
             <span>SCALE.</span>
           </div>
           <p className="vision-banner-sub">
-            The core engineering philosophy driving every solution and product we build at VYNTRA Solutions.
+            The core engineering philosophy driving every solution and product we build at TAVQEN Technologies.
           </p>
         </div>
       </div>
@@ -374,7 +374,7 @@ export function FutureProducts() {
       <div className="wrap">
         <Head label="In-house Innovations" title="Future Products in the Pipeline." />
         <p className="lead rv" style={{ marginTop: '1.25rem' }}>
-          Proprietary cloud platforms, AI productivity engines, and developer tools currently engineered in-house by VYNTRA Solutions. Currently in active development and planned testing phases.
+          Proprietary cloud platforms, AI productivity engines, and developer tools currently engineered in-house by TAVQEN Technologies. Currently in active development and planned testing phases.
         </p>
 
         {loading && productList.length === 0 ? (
@@ -394,10 +394,10 @@ export function FutureProducts() {
                       <span className="term-dot green" />
                       <span className="term-title">
                         {prod.previewType === 'cloud'
-                          ? 'vyntra-cloud ~ deploy-monitor'
+                          ? 'tavqen-cloud ~ deploy-monitor'
                           : prod.previewType === 'ai'
-                          ? 'vyntra-ai ~ workflow-engine'
-                          : 'vyntra-studio ~ dev-workspace'}
+                          ? 'tavqen-ai ~ workflow-engine'
+                          : 'tavqen-studio ~ dev-workspace'}
                       </span>
                     </div>
                     <div className="terminal-body">

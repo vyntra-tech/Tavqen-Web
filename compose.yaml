@@ -1,9 +1,9 @@
 services:
-  vyntra:
+  tavqen:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: vyntra-app
+    container_name: tavqen-app
     restart: unless-stopped
     env_file:
       - .env
@@ -13,7 +13,7 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - vyntra-uploads:/app/public/uploads
+      - tavqen-uploads:/app/public/uploads
 
 volumes:
-  vyntra-uploads:
+  tavqen-uploads:

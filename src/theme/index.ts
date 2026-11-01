@@ -7,28 +7,46 @@ const config: ThemeConfig = {
 
 const colors = {
   brand: {
-    50: '#F5F3FF',
-    100: '#EDE9FE',
-    200: '#DDD6FE',
-    300: '#C4B5FD',
-    400: '#A78BFA',
-    500: '#7C3AED', // Primary VYNTRA Purple
-    600: '#6D28D9',
-    700: '#5B21B6',
-    800: '#4C1D95',
-    900: '#2E1065',
+    50: '#EBF3FF',
+    100: '#D6E6FF',
+    200: '#ADD0FF',
+    300: '#75B0FF',
+    400: '#3D8EFF',
+    500: '#075BFF', // Electric Blue (Primary TAVQEN)
+    600: '#064CE0',
+    700: '#1747E8', // Royal Blue
+    800: '#0D35B3',
+    900: '#071F7A',
   },
   cyan: {
-    50: '#ECFEFF',
-    100: '#CFFAFE',
-    200: '#A5F3FC',
-    300: '#67E8F9',
-    400: '#22D3EE',
-    500: '#06B6D4', // Accent VYNTRA Cyan
-    600: '#0891B2',
-    700: '#0E7490',
-    800: '#155E75',
-    900: '#164E63',
+    50: '#E6FBFF',
+    100: '#B8F4FF',
+    200: '#85EDFF',
+    300: '#47E4FF',
+    400: '#1ADDFE',
+    500: '#00D9FF', // Cyan Accent
+    600: '#00B4D6',
+    700: '#008EAB',
+    800: '#006B82',
+    900: '#004A5C',
+  },
+  purple: {
+    50: '#F4EFFF',
+    100: '#E5D6FF',
+    200: '#CDB0FF',
+    300: '#AC7EFF',
+    400: '#9252FF',
+    500: '#813BFF', // Purple Accent from Logo Ribbon
+    600: '#6E25EA',
+    700: '#5A17C6',
+    800: '#46109F',
+    900: '#2E066E',
+  },
+  silver: {
+    100: '#F8FAFC',
+    200: '#E8EDF5', // Metallic Silver
+    300: '#CBD5E1',
+    400: '#94A3B8',
   },
   navy: {
     50: '#F8FAFC',
@@ -39,14 +57,14 @@ const colors = {
     500: '#64748B',
     600: '#334155',
     700: '#1E293B',
-    800: '#0F172A',
-    850: '#0F1626',
-    900: '#080C16', // Dark Navy VYNTRA Secondary
-    950: '#04060B', // Ultra-Dark Obsidian Background
+    800: '#0D152B',
+    850: '#0A1022',
+    900: '#080D1B', // Midnight Navy
+    950: '#05070D', // Deep Black
   },
-  cardBg: '#090D1A',
-  cardBgHover: '#0E1424',
-  cardBorder: 'rgba(255, 255, 255, 0.07)',
+  cardBg: '#080D1B',
+  cardBgHover: '#0E172F',
+  cardBorder: 'rgba(7, 91, 255, 0.16)',
 }
 
 const fonts = {
@@ -57,15 +75,15 @@ const fonts = {
 const styles = {
   global: (props: any) => ({
     body: {
-      bg: props.colorMode === 'dark' ? '#04060B' : '#F8FAFC',
-      color: props.colorMode === 'dark' ? '#F8FAFC' : '#0B1020',
+      bg: props.colorMode === 'dark' ? '#05070D' : '#F8FAFC',
+      color: props.colorMode === 'dark' ? '#FFFFFF' : '#05070D',
       minHeight: '100vh',
     },
     '*::placeholder': {
       color: 'gray.500',
     },
     '*, *::before, &::after': {
-      borderColor: 'rgba(255, 255, 255, 0.07)',
+      borderColor: 'rgba(7, 91, 255, 0.14)',
     },
   }),
 }
@@ -77,7 +95,7 @@ const components = {
       borderRadius: 'lg',
       transition: 'all 0.2s ease-in-out',
       _focusVisible: {
-        boxShadow: '0 0 0 3px rgba(6, 182, 212, 0.4)',
+        boxShadow: '0 0 0 3px rgba(0, 217, 255, 0.4)',
       },
     },
     variants: {
@@ -89,7 +107,7 @@ const components = {
             _hover: {
               bg: 'brand.600',
               transform: 'translateY(-1px)',
-              boxShadow: '0 4px 14px rgba(124, 58, 237, 0.4)',
+              boxShadow: '0 4px 16px rgba(7, 91, 255, 0.45)',
             },
             _active: {
               bg: 'brand.700',
@@ -100,12 +118,12 @@ const components = {
         if (props.colorScheme === 'cyan') {
           return {
             bg: 'cyan.500',
-            color: '#0B1020',
+            color: '#05070D',
             fontWeight: '700',
             _hover: {
               bg: 'cyan.400',
               transform: 'translateY(-1px)',
-              boxShadow: '0 4px 14px rgba(6, 182, 212, 0.4)',
+              boxShadow: '0 4px 16px rgba(0, 217, 255, 0.45)',
             },
           }
         }

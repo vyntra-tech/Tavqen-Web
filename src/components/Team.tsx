@@ -70,7 +70,7 @@ export default function Team() {
     <section id="team" className="team-sec">
       <div className="wrap">
         <p className="lab">Meet Our Team</p>
-        <Split>The Developers Behind VYNTRA</Split>
+        <Split>The Developers Behind TAVQEN</Split>
         <p className="lead rv" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
           Our dedicated engineering team crafts modern web applications, scalable digital products, and intelligent AI solutions with precision and care.
         </p>
@@ -117,13 +117,13 @@ export default function Team() {
                           style={{
                             width: '100%',
                             height: '100%',
-                            background: 'linear-gradient(135deg, #1e1b4b, #0f172a)',
+                            background: 'linear-gradient(135deg, #080D1B, #075BFF)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             fontSize: '2rem',
                             fontWeight: 700,
-                            color: '#a78bfa',
+                            color: '#00D9FF',
                           }}
                         >
                           {m.initials || m.name.slice(0, 2).toUpperCase()}

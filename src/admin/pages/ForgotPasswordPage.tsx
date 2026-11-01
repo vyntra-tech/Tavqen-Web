@@ -20,7 +20,7 @@ import {
 import { authApi } from '../../services/api'
 
 export function ForgotPasswordPage() {
-  const [email, setEmail] = useState('admin@vyntra.tech')
+  const [email, setEmail] = useState('admin@tavqen.tech')
   const [resetToken, setResetToken] = useState('')
   const [newPassword, setNewPassword] = useState('')
   const [step, setStep] = useState<'request' | 'reset'>('request')
@@ -121,7 +121,7 @@ export function ForgotPasswordPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@vyntra.tech"
+                  placeholder="admin@tavqen.tech"
                 />
               </FormControl>
               <Button type="submit" w="full" variant="gradient" size="md" isLoading={loading}>

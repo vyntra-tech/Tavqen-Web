@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "vyntra-dev",
+      name: "tavqen-dev",
       script: "npm.cmd",
       args: "run dev",
       interpreter: "none",

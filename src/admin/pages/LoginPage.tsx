@@ -24,7 +24,7 @@ import {
 } from '@chakra-ui/react'
 import { Eye, EyeOff, Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react'
 import { useAuth } from '../../context/AuthContext'
-import vyntraLogo from '../../assets/vyntra-logo.png'
+import tavqenLogo from '../../assets/TAVQEN_fav.png'
 
 export function LoginPage() {
   const [email, setEmail] = useState('')
@@ -59,7 +59,7 @@ export function LoginPage() {
       await login(email.trim(), password)
       toast({
         title: 'Authentication Successful',
-        description: 'Welcome to the VYNTRA Command Center.',
+        description: 'Welcome to the TAVQEN Command Center.',
         status: 'success',
         duration: 2500,
         isClosable: true,
@@ -75,10 +75,10 @@ export function LoginPage() {
 
   const fillCredentials = (type: 'admin' | 'editor') => {
     if (type === 'admin') {
-      setEmail('admin@vyntra.tech')
+      setEmail('admin@tavqen.tech')
       setPassword('VyntraAdmin@2026!')
     } else {
-      setEmail('editor@vyntra.tech')
+      setEmail('editor@tavqen.tech')
       setPassword('VyntraEditor@2026!')
     }
     setError(null)
@@ -123,32 +123,32 @@ export function LoginPage() {
         {/* Brand Header with Official 3D Glowing V Logo */}
         <VStack spacing={3} align="center" mb={6}>
           <Box position="relative" display="flex" alignItems="center" justifyContent="center">
-            {/* Ambient Purple-Cyan Glow */}
+            {/* Ambient Electric Blue & Cyan Glow */}
             <Box
               position="absolute"
               w="90px"
               h="90px"
               borderRadius="full"
-              bg="radial-gradient(circle, rgba(124, 58, 237, 0.45) 0%, rgba(6, 182, 212, 0.25) 50%, transparent 75%)"
+              bg="radial-gradient(circle, rgba(7, 91, 255, 0.45) 0%, rgba(0, 217, 255, 0.3) 50%, transparent 75%)"
               filter="blur(18px)"
               pointerEvents="none"
             />
             <Image
-              src={vyntraLogo}
-              alt="VYNTRA 3D Emblem"
+              src={tavqenLogo}
+              alt="TAVQEN Emblem"
               w="78px"
               h="78px"
               objectFit="contain"
               position="relative"
               zIndex={1}
-              filter="drop-shadow(0 10px 24px rgba(124, 58, 237, 0.45))"
+              filter="drop-shadow(0 10px 24px rgba(0, 217, 255, 0.5))"
               transition="transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)"
               _hover={{ transform: 'scale(1.06)' }}
             />
           </Box>
           <Box textAlign="center">
             <Heading size="lg" fontFamily="heading" color="white" fontWeight="700" letterSpacing="-0.02em">
-              VYNTRA Admin
+              TAVQEN Admin
             </Heading>
             <Text fontSize="xs" color="gray.400" mt={1}>
               Secure sign-in for content and infrastructure operations
@@ -174,7 +174,7 @@ export function LoginPage() {
               <InputGroup size="md">
                 <Input
                   type="email"
-                  placeholder="admin@vyntra.tech"
+                  placeholder="admin@tavqen.tech"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   autoComplete="email"
@@ -269,7 +269,7 @@ export function LoginPage() {
         <Flex justify="center" mt={4}>
           <RouterLink to="/">
             <Text fontSize="xs" color="gray.400" _hover={{ color: 'cyan.400' }}>
-              ← Return to VYNTRA Public Website
+              ← Return to TAVQEN Public Website
             </Text>
           </RouterLink>
         </Flex>

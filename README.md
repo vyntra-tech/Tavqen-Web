@@ -1,4 +1,4 @@
-# VYNTRA Solutions – Company Website
+# TAVQEN Technologies – Company Website
 
 Build. Deploy. Scale. React + TypeScript + Vite frontend, GSAP/ScrollTrigger animations, React Three Fiber hero, Express contact API.
 

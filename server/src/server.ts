@@ -4,7 +4,7 @@ import { connectDatabase } from './config/database.js'
 import { getDb } from '../db.js'
 
 async function bootstrap() {
-  console.log('🚀 Initializing VYNTRA Server & Admin Engine...')
+  console.log('🚀 Initializing TAVQEN Server & Admin Engine...')
 
   // Initialize and seed local database cache
   const db = getDb()
@@ -15,7 +15,7 @@ async function bootstrap() {
 
   app.listen(ENV.PORT, () => {
     console.log(`\n======================================================`)
-    console.log(`⚡ VYNTRA Backend active on http://localhost:${ENV.PORT}`)
+    console.log(`⚡ TAVQEN Backend active on http://localhost:${ENV.PORT}`)
     console.log(`🔐 Admin API: http://localhost:${ENV.PORT}/api/admin/me`)
     console.log(`🌐 Public API: http://localhost:${ENV.PORT}/api/projects`)
     console.log(`======================================================\n`)

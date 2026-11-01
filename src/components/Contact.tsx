@@ -340,7 +340,7 @@ export default function Contact() {
                   </p>
                   <a
                     href={getWhatsAppUrl(
-                      'Hi VYNTRA team, I would like to make a general inquiry and discuss a project booking.'
+                      'Hi TAVQEN team, I would like to make a general inquiry and discuss a project booking.'
                     )}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -364,7 +364,7 @@ export default function Contact() {
                   </p>
                   <a
                     href={getWhatsAppUrl(
-                      'Hi VYNTRA team, I am interested in Software Development services (Web Apps, SaaS, Cloud & AI).'
+                      'Hi TAVQEN team, I am interested in Software Development services (Web Apps, SaaS, Cloud & AI).'
                     )}
                     target="_blank"
                     rel="noopener noreferrer"

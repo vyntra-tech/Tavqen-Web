@@ -18,7 +18,7 @@ export function ProtectedRoute({ children, requiredRole }: ProtectedRouteProps) 
         <VStack spacing={4}>
           <Spinner size="xl" color="brand.500" thickness="4px" speed="0.75s" />
           <Text color="gray.400" fontSize="sm" fontFamily="heading">
-            Authenticating VYNTRA Admin Portal...
+            Authenticating TAVQEN Admin Portal...
           </Text>
         </VStack>
       </Flex>

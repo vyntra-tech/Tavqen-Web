@@ -114,7 +114,7 @@ export default function Reviews() {
       <div className="wrap">
         <div className="reviews-header">
           <p className="lab">Client Reviews</p>
-          <Split>What Founders Say About VYNTRA</Split>
+          <Split>What Founders Say About TAVQEN</Split>
           <p className="lead rv" style={{ marginTop: '0.75rem', fontSize: '0.98rem' }}>
             Real feedback from ambitious founders and teams who built their digital products, MVPs, and scalable platforms with us.
           </p>

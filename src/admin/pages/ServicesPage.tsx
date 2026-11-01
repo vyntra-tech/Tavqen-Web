@@ -228,7 +228,7 @@ export function ServicesPage() {
             </Badge>
           </HStack>
           <Text fontSize="sm" color="gray.400">
-            Define VYNTRA core technology capabilities and display arrangement
+            Define TAVQEN core technology capabilities and display arrangement
           </Text>
         </Box>
 

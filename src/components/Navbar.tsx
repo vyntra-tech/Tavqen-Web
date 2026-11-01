@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from '../lib/gsap'
-import vyntraLogo from '../assets/vyntra-logo.png'
+import tavqenLogo from '../assets/TAVQEN_logo_clean.png'
 const LINKS: [string, string][] = [
   ['about', 'About'],
   ['services', 'Services'],
   ['work', 'Work'],
-  ['products', 'Products'],
+  ['gallery', 'Gallery'],
+
 ]
 
 export default function Navbar() {
@@ -35,18 +36,12 @@ export default function Navbar() {
   return (
     <nav className={solid ? 's' : ''}>
       <div className="wrap nb">
-        <a className="logo" href="#home" aria-label="VYNTRA Solutions home">
+        <a className="nav-brand-logo" href="#home" aria-label="TAVQEN Technologies home">
           <img
-            src={vyntraLogo}
-            alt="VYNTRA Solutions"
-            style={{
-              width: '28px',
-              height: '28px',
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 2px 8px rgba(124, 58, 237, 0.45))',
-            }}
+            src={tavqenLogo}
+            alt="TAVQEN Technologies"
+            className="nav-logo-img"
           />
-          VYNTRA
         </a>
         <button className="burger" aria-expanded={open} aria-controls="lk" aria-label="Toggle menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
         <div className={'links' + (open ? ' o' : '')} id="lk">

@@ -569,7 +569,7 @@ export async function createGalleryItem(req: Request, res: Response) {
     type: type || 'image',
     image: image || '',
     videoUrl: videoUrl || '',
-    tag: tag || 'VYNTRA',
+    tag: tag || 'TAVQEN',
     caption: caption || '',
     alt: alt || title,
     uploadedAt: new Date().toISOString(),

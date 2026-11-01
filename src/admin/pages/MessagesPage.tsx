@@ -312,7 +312,7 @@ export function MessagesPage() {
                   </Box>
                   <Button
                     as="a"
-                    href={`mailto:${selectedMessage.email}?subject=Regarding your VYNTRA inquiry: ${selectedMessage.type}`}
+                    href={`mailto:${selectedMessage.email}?subject=Regarding your TAVQEN inquiry: ${selectedMessage.type}`}
                     size="xs"
                     variant="solid"
                     colorScheme="brand"

@@ -25,7 +25,7 @@ import {
   Tooltip,
   Image,
 } from '@chakra-ui/react'
-import vyntraLogo from '../../assets/vyntra-logo.png'
+import tavqenLogo from '../../assets/TAVQEN_fav.png'
 import {
   LayoutDashboard,
   Briefcase,
@@ -197,18 +197,19 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           <HStack as={RouterLink} to="/admin/dashboard" spacing={3}>
             <Box position="relative" display="flex" alignItems="center" justifyContent="center">
               <Image
-                src={vyntraLogo}
-                alt="VYNTRA"
+                src={tavqenLogo}
+                alt="TAVQEN"
                 w="34px"
                 h="34px"
                 objectFit="contain"
-                filter="drop-shadow(0 4px 12px rgba(124, 58, 237, 0.4))"
+                borderRadius="6px"
+                filter="drop-shadow(0 4px 12px rgba(6, 182, 212, 0.4))"
               />
             </Box>
             {!collapsed && (
               <Box>
                 <Text fontFamily="heading" fontWeight="700" fontSize="md" letterSpacing="tight" lineHeight="shorter">
-                  VYNTRA
+                  TAVQEN
                 </Text>
                 <Text fontSize="2xs" color="cyan.400" fontWeight="600" letterSpacing="wider">
                   ADMIN CONSOLE
@@ -301,16 +302,17 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           <Box p={5} borderBottomWidth="1px" borderColor="rgba(255, 255, 255, 0.08)">
             <HStack spacing={3}>
               <Image
-                src={vyntraLogo}
-                alt="VYNTRA"
+                src={tavqenLogo}
+                alt="TAVQEN"
                 w="32px"
                 h="32px"
                 objectFit="contain"
-                filter="drop-shadow(0 2px 8px rgba(124, 58, 237, 0.4))"
+                borderRadius="6px"
+                filter="drop-shadow(0 2px 8px rgba(6, 182, 212, 0.4))"
               />
               <Box>
                 <Text fontFamily="heading" fontWeight="700" fontSize="md">
-                  VYNTRA
+                  TAVQEN
                 </Text>
                 <Text fontSize="2xs" color="cyan.400" fontWeight="600">
                   ADMIN CONSOLE
@@ -409,7 +411,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                       {user?.name || 'Administrator'}
                     </Text>
                     <Text fontSize="2xs" color="gray.400">
-                      {user?.email || 'admin@vyntra.tech'}
+                      {user?.email || 'admin@tavqen.tech'}
                     </Text>
                   </Box>
                 </HStack>

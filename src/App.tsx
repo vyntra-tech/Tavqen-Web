@@ -9,6 +9,7 @@ import Reviews from './components/Reviews'
 import Team from './components/Team'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import FloatingContactWidget from './components/FloatingContactWidget'
 import { AdminRoutes } from './admin/AdminRoutes'
 import { ContentProvider } from './context/ContentContext'
 
@@ -138,7 +139,7 @@ function PublicSite() {
           <Services />
           <Vision />
           <Work />
-          <FutureProducts />
+          {/* <FutureProducts /> */}
           <Process />
           <Gallery />
           <Why />
@@ -147,6 +148,7 @@ function PublicSite() {
           <Contact />
         </main>
         <Footer />
+        <FloatingContactWidget />
       </div>
     </ContentProvider>
   )

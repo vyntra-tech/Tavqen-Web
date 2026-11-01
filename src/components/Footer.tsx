@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
   Sparkles,
 } from 'lucide-react'
-import vyntraLogo from '../assets/vyntra-logo.png'
+import tavqenLogo from '../assets/TAVQEN_logo_clean.png'
 import { useContent } from '../context/ContentContext'
 
 export default function Footer() {
@@ -119,11 +119,11 @@ export default function Footer() {
         <div ref={trackRef} className="footer-huge-outline-track" aria-hidden="true">
           <div className="footer-text-spotlight-container">
             {/* Base Outlined Text */}
-            <span className="footer-huge-outline-text">VYNTRA</span>
+            <span className="footer-huge-outline-text">TAVQEN</span>
 
             {/* Dynamic Spotlight Fill: Colors light up wherever the cursor moves */}
             <span className="footer-huge-spotlight-fill" aria-hidden="true">
-              VYNTRA
+              TAVQEN
             </span>
           </div>
         </div>
@@ -134,18 +134,18 @@ export default function Footer() {
         <div className="footer-main-grid">
           {/* Column 1: Brand Info & Social Media Icons */}
           <div className="footer-brand-col footer-reveal">
-            <a className="footer-logo" href="#home" aria-label="VYNTRA Solutions home">
+            <a className="footer-logo" href="#home" aria-label="TAVQEN Technologies home">
               <img
-                src={vyntraLogo}
-                alt="VYNTRA Solutions"
+                src={tavqenLogo}
+                alt="TAVQEN Technologies"
                 style={{
-                  width: '32px',
-                  height: '32px',
+                  width: '175px',
+                  maxWidth: '180px',
+                  height: '46px',
                   objectFit: 'contain',
-                  filter: 'drop-shadow(0 2px 10px rgba(124, 58, 237, 0.45))',
+                  filter: 'drop-shadow(0 2px 12px rgba(7, 91, 255, 0.4))',
                 }}
               />
-              <span>VYNTRA Solutions</span>
             </a>
 
             <p className="footer-brand-desc">
@@ -262,8 +262,8 @@ export default function Footer() {
               </div>
               <div className="footer-contact-item">
                 <span className="footer-contact-label">Direct Email:</span>
-                <a href={`mailto:${settings?.contactEmail || 'hellow.vyntra@gmail.com'}`} className="footer-contact-value footer-link-highlight">
-                  {settings?.contactEmail || 'hellow.vyntra@gmail.com'}
+                <a href={`mailto:${settings?.contactEmail || 'contact@tavqen.com'}`} className="footer-contact-value footer-link-highlight">
+                  {settings?.contactEmail || 'contact@tavqen.com'}
                 </a>
               </div>
               <div className="footer-contact-item">
@@ -277,7 +277,7 @@ export default function Footer() {
         {/* 3. Bottom Copyright & Credits Bar */}
         <div className="footer-bottom-bar footer-reveal">
           <p className="footer-copyright">
-            © {new Date().getFullYear()} VYNTRA Solutions. All rights reserved. ·{' '}
+            © {new Date().getFullYear()} TAVQEN Technologies. All rights reserved. ·{' '}
             <a href="/admin/dashboard" style={{ color: '#06B6D4', textDecoration: 'none' }}>
               Admin Portal
             </a>

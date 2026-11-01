@@ -54,7 +54,7 @@ export function verifyToken(token) {
   }
 }
 
-// Initial seed data representing real VYNTRA content
+// Initial seed data representing real TAVQEN content
 function getInitialSeedData() {
   const adminPasswordHash = hashPassword('VyntraAdmin@2026!')
   const editorPasswordHash = hashPassword('VyntraEditor@2026!')
@@ -64,7 +64,7 @@ function getInitialSeedData() {
       {
         id: 'usr-admin-1',
         name: 'Chandrabhan Gadeshwar',
-        email: 'admin@vyntra.tech',
+        email: 'admin@tavqen.tech',
         passwordHash: adminPasswordHash,
         role: 'admin',
         avatar: '/uploads/chandrabhan.jpg',
@@ -74,7 +74,7 @@ function getInitialSeedData() {
       {
         id: 'usr-editor-1',
         name: 'Editorial Team',
-        email: 'editor@vyntra.tech',
+        email: 'editor@tavqen.tech',
         passwordHash: editorPasswordHash,
         role: 'editor',
         avatar: '/uploads/shubham.jpg',
@@ -94,7 +94,7 @@ function getInitialSeedData() {
         placeholder: false,
         image: '/uploads/Purulia.png',
         url: 'https://puruliatravelsfinal.netlify.app/',
-        githubUrl: 'https://github.com/vyntra-tech/purulia-travels',
+        githubUrl: 'https://github.com/tavqen-tech/purulia-travels',
         status: 'published',
         completionDate: '2026-02-15',
         featured: true,
@@ -113,7 +113,7 @@ function getInitialSeedData() {
         placeholder: false,
         image: '/uploads/Hangry.png',
         url: 'https://hangry-frontend-seven.vercel.app/',
-        githubUrl: 'https://github.com/vyntra-tech/hangry-app',
+        githubUrl: 'https://github.com/tavqen-tech/hangry-app',
         status: 'published',
         completionDate: '2026-01-20',
         featured: true,
@@ -132,7 +132,7 @@ function getInitialSeedData() {
         placeholder: false,
         image: '/uploads/UniBill-Photo.png',
         url: 'https://unibillpro.devforge.in/',
-        githubUrl: 'https://github.com/vyntra-tech/unibill-pro',
+        githubUrl: 'https://github.com/tavqen-tech/unibill-pro',
         status: 'published',
         completionDate: '2025-12-10',
         featured: true,
@@ -151,7 +151,7 @@ function getInitialSeedData() {
         placeholder: false,
         image: '/uploads/Namaste.png',
         url: 'https://namatecafe.web.app/',
-        githubUrl: 'https://github.com/vyntra-tech/namaste-cafe',
+        githubUrl: 'https://github.com/tavqen-tech/namaste-cafe',
         status: 'published',
         completionDate: '2025-11-28',
         featured: true,
@@ -396,7 +396,7 @@ function getInitialSeedData() {
         company: 'Namaste Cafe',
         initials: 'AS',
         rating: 5,
-        review: 'VYNTRA transformed our brand into an extraordinary digital experience. Online orders surged by 45% within the first month.',
+        review: 'TAVQEN transformed our brand into an extraordinary digital experience. Online orders surged by 45% within the first month.',
         project: 'Restaurant Digital Platform',
         tag: 'Web Architecture',
         avatar: '',
@@ -477,8 +477,8 @@ function getInitialSeedData() {
     products: [
       {
         id: 'prod-1',
-        name: 'VYNTRA Cloud',
-        slug: 'vyntra-cloud',
+        name: 'TAVQEN Cloud',
+        slug: 'tavqen-cloud',
         category: 'Cloud Platform & DevOps',
         status: 'In Development',
         previewType: 'cloud',
@@ -490,8 +490,8 @@ function getInitialSeedData() {
       },
       {
         id: 'prod-2',
-        name: 'VYNTRA AI',
-        slug: 'vyntra-ai',
+        name: 'TAVQEN AI',
+        slug: 'tavqen-ai',
         category: 'Intelligent Automation',
         status: 'Planned',
         previewType: 'ai',
@@ -503,8 +503,8 @@ function getInitialSeedData() {
       },
       {
         id: 'prod-3',
-        name: 'VYNTRA Studio',
-        slug: 'vyntra-studio',
+        name: 'TAVQEN Studio',
+        slug: 'tavqen-studio',
         category: 'Developer Ecosystem',
         status: 'Planned',
         previewType: 'studio',
@@ -523,9 +523,9 @@ function getInitialSeedData() {
         category: 'story',
         type: 'video',
         image: '/uploads/student_story.jpg',
-        tag: 'ANOTHER PLACEMENT FROM VYNTRA',
+        tag: 'ANOTHER PLACEMENT FROM TAVQEN',
         caption: 'Candid video interview sharing how hands-on coding transformed theoretical knowledge into production-ready software engineering.',
-        alt: 'Placement success story of a young engineer at VYNTRA',
+        alt: 'Placement success story of a young engineer at TAVQEN',
         uploadedAt: '2026-01-10T11:00:00.000Z'
       },
       {
@@ -537,7 +537,7 @@ function getInitialSeedData() {
         image: '/uploads/team_celebration.jpg',
         tag: 'MILESTONE CELEBRATIONS',
         caption: 'Festive treats and shared laughter following a successful multi-tenant SaaS delivery sprint.',
-        alt: 'VYNTRA team celebrating sprint milestone with festive sweets in modern office',
+        alt: 'TAVQEN team celebrating sprint milestone with festive sweets in modern office',
         uploadedAt: '2026-01-18T16:30:00.000Z'
       },
       {
@@ -549,7 +549,7 @@ function getInitialSeedData() {
         image: '/uploads/founders_duo.jpg',
         tag: 'STUDIO LIFE',
         caption: 'Daily standup and architecture brainstorm session in the startup tech bay.',
-        alt: 'VYNTRA engineers smiling in front of creative tech workspace',
+        alt: 'TAVQEN engineers smiling in front of creative tech workspace',
         uploadedAt: '2026-01-22T09:15:00.000Z'
       },
       {
@@ -566,14 +566,14 @@ function getInitialSeedData() {
       },
       {
         id: 'community-cohort',
-        title: 'The VYNTRA Developer Family',
+        title: 'The TAVQEN Developer Family',
         subtitle: 'Builders, engineers, and creators united',
         category: 'community',
         type: 'image',
         image: '/uploads/community_group.jpg',
         tag: 'COMMUNITY & COHORT',
         caption: 'A united collective of builders pushing boundaries and shipping modern software products together.',
-        alt: 'VYNTRA engineering community cohort standing together smiling in office',
+        alt: 'TAVQEN engineering community cohort standing together smiling in office',
         uploadedAt: '2026-02-12T18:00:00.000Z'
       }
     ],
@@ -581,16 +581,16 @@ function getInitialSeedData() {
       hero: {
         tagline: 'Build. Deploy. Scale. · AI, Cloud & Software',
         title: 'We turn ideas into digital experiences.',
-        subtitle: 'From custom software, AI-powered solutions, and cloud architectures to scalable digital products, VYNTRA Solutions helps businesses transform ideas into meaningful technology.',
+        subtitle: 'From custom software, AI-powered solutions, and cloud architectures to scalable digital products, TAVQEN Technologies helps businesses transform ideas into meaningful technology.',
         primaryCtaLabel: 'Explore Our Work',
         primaryCtaUrl: '#work',
         secondaryCtaLabel: 'Start a Project',
         secondaryCtaUrl: '#contact'
       },
       about: {
-        label: 'ABOUT VYNTRA',
+        label: 'ABOUT TAVQEN',
         heading: 'We Build Digital Products That Matter.',
-        description: 'VYNTRA Solutions helps startups and enterprises build modern web applications, scalable cloud solutions, and AI-powered software through thoughtful design and reliable engineering.',
+        description: 'TAVQEN Technologies helps startups and enterprises build modern web applications, scalable cloud solutions, and AI-powered software through thoughtful design and reliable engineering.',
         stats: [
           { value: '20+', label: 'Projects Delivered' },
           { value: '15+', label: 'Startup Clients' },
@@ -601,7 +601,7 @@ function getInitialSeedData() {
         video: {
           src: '/uploads/about-vedeio.mp4',
           poster: '',
-          caption: 'Meet VYNTRA'
+          caption: 'Meet TAVQEN'
         }
       },
       vision: {
@@ -609,12 +609,12 @@ function getInitialSeedData() {
         statement: 'Our mission is to eliminate technical friction, giving ambitious founders the architectural edge to innovate, deploy, and dominate their category.'
       },
       seo: {
-        title: 'VYNTRA Solutions | Build. Deploy. Scale. | Software, AI & Cloud',
-        description: 'VYNTRA Solutions builds AI-powered software, next-generation cloud solutions, and developer automation tools. Build. Deploy. Scale.',
-        keywords: 'software development, AI solutions, cloud infrastructure, SaaS development, React, Node.js, VYNTRA',
-        ogTitle: 'VYNTRA Solutions',
+        title: 'TAVQEN Technologies | Build. Deploy. Scale. | Software, AI & Cloud',
+        description: 'TAVQEN Technologies builds AI-powered software, next-generation cloud solutions, and developer automation tools. Build. Deploy. Scale.',
+        keywords: 'software development, AI solutions, cloud infrastructure, SaaS development, React, Node.js, TAVQEN',
+        ogTitle: 'TAVQEN Technologies',
         ogDescription: 'Build. Deploy. Scale. We turn ambitious ideas into digital reality.',
-        ogImage: '/og-image.png'
+        ogImage: '/TAVQEN_logo.jpeg'
       }
     },
     messages: [
@@ -644,15 +644,15 @@ function getInitialSeedData() {
     activity: [
       {
         id: 'act-1',
-        actor: 'Chandrabhan Gadeshwar (admin@vyntra.tech)',
+        actor: 'Chandrabhan Gadeshwar (admin@tavqen.tech)',
         action: 'SYSTEM_INITIALIZED',
-        target: 'VYNTRA Admin Engine',
+        target: 'TAVQEN Admin Engine',
         details: 'Initialized database and seeded starter modules',
         timestamp: new Date().toISOString()
       },
       {
         id: 'act-2',
-        actor: 'Chandrabhan Gadeshwar (admin@vyntra.tech)',
+        actor: 'Chandrabhan Gadeshwar (admin@tavqen.tech)',
         action: 'PROJECT_PUBLISHED',
         target: 'Purulia Travels',
         details: 'Published modern travel platform portfolio piece',
@@ -660,17 +660,17 @@ function getInitialSeedData() {
       }
     ],
     settings: {
-      siteName: 'VYNTRA Solutions',
+      siteName: 'TAVQEN Technologies',
       tagline: 'Build. Deploy. Scale.',
-      contactEmail: 'contact@vyntra.tech',
-      supportEmail: 'support@vyntra.tech',
+      contactEmail: 'contact@tavqen.tech',
+      supportEmail: 'support@tavqen.tech',
       phone: '+91 98765 43210',
       whatsapp: '+91 98765 43210',
       address: 'Nagpur & Pune, Maharashtra, India',
       socials: [
-        { label: 'LinkedIn', url: 'https://linkedin.com/company/vyntra-tech' },
-        { label: 'GitHub', url: 'https://github.com/vyntra-tech' },
-        { label: 'Twitter / X', url: 'https://twitter.com/vyntra_tech' }
+        { label: 'LinkedIn', url: 'https://linkedin.com/company/tavqen-tech' },
+        { label: 'GitHub', url: 'https://github.com/tavqen-tech' },
+        { label: 'Twitter / X', url: 'https://twitter.com/tavqen_tech' }
       ],
       privacyUrl: '/privacy',
       termsUrl: '/terms'

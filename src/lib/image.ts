@@ -33,7 +33,7 @@ export function getImageUrl(path?: string | null): string {
     normalized = `/uploads/${normalized.slice('src/assets/'.length)}`
   }
 
-  // If VITE_API_URL is configured as a remote origin (e.g. https://api.vyntra.tech/api or http://ec2-xx:5000)
+  // If VITE_API_URL is configured as a remote origin (e.g. https://api.tavqen.tech/api or http://ec2-xx:5000)
   // and the image is served from /uploads, attach the remote origin.
   const apiUrl = import.meta.env.VITE_API_URL
   if (apiUrl && typeof apiUrl === 'string' && (apiUrl.startsWith('http://') || apiUrl.startsWith('https://'))) {

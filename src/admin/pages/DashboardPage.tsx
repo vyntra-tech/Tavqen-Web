@@ -170,7 +170,7 @@ export function DashboardPage() {
             Welcome back, {user?.name || 'Administrator'}
           </Heading>
           <Text fontSize="sm" color="gray.400" mt={0.5}>
-            Real-time management for VYNTRA software, services, team, and infrastructure
+            Real-time management for TAVQEN software, services, team, and infrastructure
           </Text>
         </Box>
 

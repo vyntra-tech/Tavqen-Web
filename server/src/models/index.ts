@@ -9,6 +9,7 @@ export interface IUser extends Document {
   passwordHash: string
   role: 'admin' | 'editor'
   avatar?: string
+  avatarPublicId?: string
   title?: string
   createdAt: Date
   updatedAt: Date
@@ -21,6 +22,7 @@ const UserSchema = new Schema<IUser>(
     passwordHash: { type: String, required: true },
     role: { type: String, enum: ['admin', 'editor'], default: 'admin' },
     avatar: { type: String, default: '' },
+    avatarPublicId: { type: String, default: '' },
     title: { type: String, default: 'Team Lead' },
   },
   { timestamps: true }
@@ -39,6 +41,7 @@ export interface IProject extends Document {
   tech: string[]
   features: string[]
   image?: string
+  imagePublicId?: string
   url?: string
   githubUrl?: string
   status: 'draft' | 'published' | 'archived'
@@ -58,6 +61,7 @@ const ProjectSchema = new Schema<IProject>(
     tech: { type: [String], default: [] },
     features: { type: [String], default: [] },
     image: { type: String, default: '' },
+    imagePublicId: { type: String, default: '' },
     url: { type: String, default: '' },
     githubUrl: { type: String, default: '' },
     status: { type: String, enum: ['draft', 'published', 'archived'], default: 'published' },
@@ -148,6 +152,7 @@ export interface ITeamMember extends Document {
   role: string
   initials: string
   image: string
+  imagePublicId?: string
   imagePosition?: string
   specialty?: string
   bio?: string
@@ -168,6 +173,7 @@ const TeamMemberSchema = new Schema<ITeamMember>(
     role: { type: String, required: true, trim: true },
     initials: { type: String, required: true },
     image: { type: String, default: '' },
+    imagePublicId: { type: String, default: '' },
     imagePosition: { type: String, default: 'center 20%' },
     specialty: { type: String, default: '' },
     bio: { type: String, default: '' },
@@ -197,6 +203,7 @@ export interface ITestimonial extends Document {
   project: string
   tag: string
   avatar?: string
+  avatarPublicId?: string
   status: 'published' | 'draft'
   order: number
   createdAt: Date
@@ -214,6 +221,7 @@ const TestimonialSchema = new Schema<ITestimonial>(
     project: { type: String, default: '' },
     tag: { type: String, default: 'Client Feedback' },
     avatar: { type: String, default: '' },
+    avatarPublicId: { type: String, default: '' },
     status: { type: String, enum: ['published', 'draft'], default: 'published' },
     order: { type: Number, default: 0 },
   },
@@ -261,6 +269,7 @@ export interface IGalleryItem extends Document {
   category: 'story' | 'celebration' | 'mentorship' | 'stat' | 'community'
   type: 'image' | 'video' | 'stat'
   image?: string
+  imagePublicId?: string
   videoUrl?: string
   tag?: string
   caption?: string
@@ -279,6 +288,7 @@ const GalleryItemSchema = new Schema<IGalleryItem>(
     category: { type: String, enum: ['story', 'celebration', 'mentorship', 'stat', 'community'], default: 'story' },
     type: { type: String, enum: ['image', 'video', 'stat'], default: 'image' },
     image: { type: String, default: '' },
+    imagePublicId: { type: String, default: '' },
     videoUrl: { type: String, default: '' },
     tag: { type: String, default: 'TAVQEN' },
     caption: { type: String, default: '' },
@@ -291,6 +301,38 @@ const GalleryItemSchema = new Schema<IGalleryItem>(
 )
 
 export const GalleryItem: Model<IGalleryItem> = mongoose.models.GalleryItem || mongoose.model<IGalleryItem>('GalleryItem', GalleryItemSchema)
+
+/* ==========================================================================
+   MEDIA ASSET MODEL (Cloudinary uploads catalog)
+   ========================================================================== */
+export interface IMediaAsset extends Document {
+  name?: string
+  url: string
+  secureUrl: string
+  publicId: string
+  format?: string
+  bytes?: number
+  folder?: string
+  uploader?: string
+  createdAt: Date
+  updatedAt: Date
+}
+
+const MediaAssetSchema = new Schema<IMediaAsset>(
+  {
+    name: { type: String, default: '' },
+    url: { type: String, required: true },
+    secureUrl: { type: String, required: true },
+    publicId: { type: String, required: true, index: true },
+    format: { type: String, default: '' },
+    bytes: { type: Number, default: 0 },
+    folder: { type: String, default: 'tavqen' },
+    uploader: { type: String, default: 'admin' },
+  },
+  { timestamps: true }
+)
+
+export const MediaAsset: Model<IMediaAsset> = mongoose.models.MediaAsset || mongoose.model<IMediaAsset>('MediaAsset', MediaAssetSchema)
 
 /* ==========================================================================
    ACTIVITY LOG MODEL

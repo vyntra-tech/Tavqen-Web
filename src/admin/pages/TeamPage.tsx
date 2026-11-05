@@ -38,6 +38,7 @@ import { ConfirmModal } from '../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import type { TeamMember } from '../../types'
 import { getImageUrl } from '../../lib/image'
+import { ImageUploader } from '../../components/ImageUploader'
 
 export function TeamPage() {
   const [team, setTeam] = useState<TeamMember[]>([])
@@ -55,6 +56,7 @@ export function TeamPage() {
     github: '',
     portfolio: '',
     image: '',
+    imagePublicId: '',
     size: 'medium',
     status: 'published',
   })
@@ -95,6 +97,7 @@ export function TeamPage() {
       github: '',
       portfolio: '',
       image: '',
+      imagePublicId: '',
       size: 'medium',
       status: 'published',
     })
@@ -416,13 +419,30 @@ export function TeamPage() {
                 </FormControl>
               </HStack>
 
-              {/* Photo Upload */}
+              {/* Cloudinary Profile Photo Uploader */}
               <FormControl>
-                <FormLabel fontSize="xs">Profile Photo</FormLabel>
-                <HStack spacing={3}>
-                  <Input type="file" accept="image/*" size="sm" p={1} onChange={handleImageUpload} />
-                  {formData.image && <Avatar size="sm" src={getImageUrl(formData.image)} />}
-                </HStack>
+                <ImageUploader
+                  label="Team Profile Photo (Cloudinary)"
+                  value={formData.image}
+                  publicId={formData.imagePublicId}
+                  folder="tavqen/team"
+                  aspectRatio="square"
+                  onChange={(url, publicId) => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      image: url,
+                      imagePublicId: publicId,
+                    }))
+                  }}
+                  onRemove={() => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      image: '',
+                      imagePublicId: '',
+                    }))
+                  }}
+                  helpText="Square ratio recommended for team member avatars."
+                />
               </FormControl>
             </VStack>
           </ModalBody>

@@ -21,11 +21,12 @@ import {
   Tooltip,
 } from '@chakra-ui/react'
 import { Search, Upload, Copy, Trash2, Check, ExternalLink, ImageIcon } from 'lucide-react'
-import { galleryApi } from '../../services/api'
+import { galleryApi, mediaApi } from '../../services/api'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import type { GalleryItem } from '../../types'
 import { getImageUrl } from '../../lib/image'
+import { ImageUploader } from '../../components/ImageUploader'
 
 export function GalleryPage() {
   const [items, setItems] = useState<GalleryItem[]>([])
@@ -63,45 +64,42 @@ export function GalleryPage() {
     if (!file) return
 
     if (!file.type.startsWith('image/')) {
-      toast({ title: 'Invalid File', description: 'Please select an image file (PNG, JPG, WebP, SVG, GIF, AVIF).', status: 'warning' })
+      toast({ title: 'Invalid File', description: 'Please select an image file (PNG, JPG, WebP, SVG, GIF).', status: 'warning' })
       targetInput.value = ''
       return
     }
 
-    if (file.size > 25 * 1024 * 1024) {
-      toast({ title: 'File Too Large', description: 'Maximum file size is 25MB.', status: 'warning' })
+    if (file.size > 10 * 1024 * 1024) {
+      toast({ title: 'File Too Large', description: 'Maximum file size is 10MB.', status: 'warning' })
       targetInput.value = ''
       return
     }
 
     setUploading(true)
-    const reader = new FileReader()
-    reader.onload = async () => {
-      try {
-        const uploadRes = await galleryApi.uploadMedia(file.name, reader.result as string)
-        await galleryApi.create({
-          title: file.name.replace(/\.[^/.]+$/, ''),
-          category: 'community',
-          type: 'image',
-          image: uploadRes.url,
-          tag: 'MEDIA UPLOAD',
-          alt: file.name,
-        })
-        toast({
-          title: 'Asset Uploaded',
-          description: `${file.name} successfully saved to media library.`,
-          status: 'success',
-          duration: 3000,
-        })
-        loadGallery()
-      } catch (err: any) {
-        toast({ title: 'Upload Failed', description: err.message, status: 'error' })
-      } finally {
-        setUploading(false)
-        targetInput.value = ''
-      }
+    try {
+      const uploadRes = await mediaApi.upload(file, 'tavqen/gallery')
+      await galleryApi.create({
+        title: file.name.replace(/\.[^/.]+$/, ''),
+        category: 'community',
+        type: 'image',
+        image: uploadRes.secureUrl || uploadRes.url,
+        imagePublicId: uploadRes.publicId,
+        tag: 'CLOUDINARY',
+        alt: file.name,
+      })
+      toast({
+        title: 'Asset Uploaded to Cloudinary',
+        description: `${file.name} successfully saved to media library.`,
+        status: 'success',
+        duration: 3000,
+      })
+      loadGallery()
+    } catch (err: any) {
+      toast({ title: 'Upload Failed', description: err.message, status: 'error' })
+    } finally {
+      setUploading(false)
+      targetInput.value = ''
     }
-    reader.readAsDataURL(file)
   }
 
   const handleCopyUrl = (url?: string, id?: string) => {

@@ -261,7 +261,42 @@ export const contactApi = {
 }
 
 /* ==========================================================================
-   GALLERY & MEDIA UPLOADS API
+   MEDIA & CLOUDINARY UPLOADS API
+   ========================================================================== */
+export const mediaApi = {
+  upload: async (
+    fileOrPayload: File | { name: string; data: string },
+    folder: string = 'tavqen'
+  ): Promise<MediaUploadResult> => {
+    if (typeof window !== 'undefined' && fileOrPayload instanceof File) {
+      const formData = new FormData()
+      formData.append('file', fileOrPayload)
+      formData.append('folder', folder)
+      const res = await apiClient.post('/admin/media/upload', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+      return res.data
+    } else {
+      const payload = fileOrPayload as { name: string; data: string }
+      const res = await apiClient.post('/admin/media/upload', {
+        name: payload.name,
+        data: payload.data,
+        folder,
+      })
+      return res.data
+    }
+  },
+  delete: async (publicIdOrUrl: string): Promise<{ ok: boolean; message: string }> => {
+    const isUrl = publicIdOrUrl.startsWith('http://') || publicIdOrUrl.startsWith('https://')
+    const res = await apiClient.delete('/admin/media/delete', {
+      data: isUrl ? { url: publicIdOrUrl } : { publicId: publicIdOrUrl },
+    })
+    return res.data
+  },
+}
+
+/* ==========================================================================
+   GALLERY API
    ========================================================================== */
 export const galleryApi = {
   getPublic: async (): Promise<GalleryItem[]> => {
@@ -279,9 +314,8 @@ export const galleryApi = {
   delete: async (id: string): Promise<void> => {
     await apiClient.delete(`/admin/gallery/${id}`)
   },
-  uploadMedia: async (name: string, dataUrl: string): Promise<MediaUploadResult> => {
-    const res = await apiClient.post('/admin/media/upload', { name, data: dataUrl })
-    return res.data
+  uploadMedia: async (name: string, dataUrl: string, folder: string = 'tavqen/gallery'): Promise<MediaUploadResult> => {
+    return mediaApi.upload({ name, data: dataUrl }, folder)
   },
 }
 

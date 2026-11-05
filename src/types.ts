@@ -24,6 +24,7 @@ export interface Showcase {
   githubUrl?: string
   placeholder?: boolean
   image?: string
+  imagePublicId?: string
   status?: 'published' | 'draft' | 'archived' | 'In Development' | 'Planned' | string
   previewType?: 'cloud' | 'ai' | 'studio'
   completionDate?: string
@@ -44,6 +45,7 @@ export interface TeamMember {
   role: string
   initials: string
   image: string
+  imagePublicId?: string
   imagePosition?: string
   specialty?: string
   bio?: string
@@ -67,6 +69,7 @@ export interface ClientReview {
   project: string
   tag: string
   avatar?: string
+  avatarPublicId?: string
   status?: 'published' | 'draft'
   order?: number
 }
@@ -78,6 +81,7 @@ export interface GalleryItem {
   category: 'story' | 'celebration' | 'mentorship' | 'stat' | 'community'
   type: 'image' | 'video' | 'stat'
   image?: string
+  imagePublicId?: string
   videoUrl?: string
   tag?: string
   captionBadge?: string
@@ -95,6 +99,7 @@ export interface AdminUser {
   email: string
   role: 'admin' | 'editor'
   avatar?: string
+  avatarPublicId?: string
   title?: string
 }
 
@@ -187,8 +192,15 @@ export interface AdminStats {
 export interface MediaUploadResult {
   ok: boolean
   url: string
-  fileName: string
-  sizeBytes: number
-  mimeType: string
-  uploadedAt: string
+  secureUrl?: string
+  publicId?: string
+  fileName?: string
+  sizeBytes?: number
+  bytes?: number
+  format?: string
+  width?: number
+  height?: number
+  mimeType?: string
+  uploadedAt?: string
+  error?: string
 }

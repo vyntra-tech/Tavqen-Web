@@ -17,4 +17,7 @@ export const ENV = {
   SMTP_PASS: process.env.SMTP_PASS || '',
   CONTACT_TO: process.env.CONTACT_TO || '',
   CONTACT_FROM: process.env.CONTACT_FROM || '',
+  CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME || 'dtzigq5hr',
+  CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY || '658744235526698',
+  CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET || '',
 } as const

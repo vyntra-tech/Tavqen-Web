@@ -14,6 +14,7 @@ import {
   ContactMessage,
   GalleryItem,
   ActivityLog,
+  MediaAsset,
 } from '../models/index.js'
 import {
   getDb,
@@ -25,6 +26,12 @@ import {
   saveDb,
 } from '../../db.js'
 import { generateToken } from '../middleware/auth.js'
+import {
+  uploadToCloudinary,
+  deleteFromCloudinary,
+  replaceCloudinaryImage,
+  extractPublicIdFromUrl,
+} from '../services/cloudinary.service.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const uploadsDir = path.join(__dirname, '../../../public/uploads')
@@ -153,17 +160,39 @@ export async function resetPassword(req: Request, res: Response) {
 }
 
 export async function updateProfile(req: Request, res: Response) {
-  const { name, title, currentPassword, newPassword } = req.body || {}
+  const { name, title, avatar, avatarPublicId, oldPublicId, currentPassword, newPassword } = req.body || {}
   const db = getDb()
   const user = db.users?.find((u: any) => u.id === req.user?.id)
+
+  // Clean up replaced old Cloudinary avatar if applicable
+  const targetOldPublicId = oldPublicId || (user?.avatarPublicId && avatarPublicId && user.avatarPublicId !== avatarPublicId ? user.avatarPublicId : null)
+  if (targetOldPublicId) {
+    deleteFromCloudinary(targetOldPublicId).catch(() => {})
+  }
 
   if (user) {
     if (name) user.name = name.trim()
     if (title) user.title = title.trim()
+    if (avatar !== undefined) user.avatar = avatar
+    if (avatarPublicId !== undefined) user.avatarPublicId = avatarPublicId
     if (newPassword && newPassword.length >= 8) {
       user.passwordHash = await bcrypt.hash(newPassword, 10)
     }
     saveDb(db)
+  }
+
+  if (isDbConnected()) {
+    try {
+      const updateData: any = {}
+      if (name) updateData.name = name.trim()
+      if (title) updateData.title = title.trim()
+      if (avatar !== undefined) updateData.avatar = avatar
+      if (avatarPublicId !== undefined) updateData.avatarPublicId = avatarPublicId
+      if (newPassword && newPassword.length >= 8) {
+        updateData.passwordHash = await bcrypt.hash(newPassword, 10)
+      }
+      await User.findByIdAndUpdate(req.user?.id, updateData)
+    } catch (err) {}
   }
 
   return res.json({
@@ -172,6 +201,8 @@ export async function updateProfile(req: Request, res: Response) {
       ...req.user,
       name: name || req.user?.name,
       title: title || req.user?.title,
+      avatar: avatar !== undefined ? avatar : req.user?.avatar,
+      avatarPublicId: avatarPublicId !== undefined ? avatarPublicId : (req.user as any)?.avatarPublicId,
     },
   })
 }
@@ -207,7 +238,7 @@ export async function getAllProjectsAdmin(req: Request, res: Response) {
 }
 
 export async function createProject(req: Request, res: Response) {
-  const { name, category, description, tech, features, url, githubUrl, image, status, completionDate, featured } = req.body || {}
+  const { name, category, description, tech, features, url, githubUrl, image, imagePublicId, status, completionDate, featured } = req.body || {}
   if (!name || !description || !category) {
     return res.status(400).json({ ok: false, error: 'Name, category, and description are required.' })
   }
@@ -227,6 +258,7 @@ export async function createProject(req: Request, res: Response) {
         url: url || '',
         githubUrl: githubUrl || '',
         image: image || '',
+        imagePublicId: imagePublicId || '',
         status: status || 'draft',
         completionDate: completionDate || new Date().toISOString().slice(0, 10),
         featured: Boolean(featured),
@@ -245,6 +277,7 @@ export async function createProject(req: Request, res: Response) {
     url: url || '',
     githubUrl: githubUrl || '',
     image: image || '',
+    imagePublicId: imagePublicId || '',
     status: status || 'draft',
     completionDate: completionDate || new Date().toISOString().slice(0, 10),
     featured: Boolean(featured),
@@ -257,6 +290,19 @@ export async function createProject(req: Request, res: Response) {
 
 export async function updateProject(req: Request, res: Response) {
   const { id } = req.params
+  const db = getDb()
+  const existingLocal = (db.projects || []).find((p: any) => p.id === id)
+
+  // Handle Cloudinary replacement
+  const oldPublicId = req.body.oldPublicId || (
+    req.body.imagePublicId && existingLocal?.imagePublicId && existingLocal.imagePublicId !== req.body.imagePublicId
+      ? existingLocal.imagePublicId
+      : null
+  )
+  if (oldPublicId) {
+    deleteFromCloudinary(oldPublicId).catch(() => {})
+  }
+
   if (isDbConnected()) {
     try {
       await Project.findByIdAndUpdate(id, req.body)
@@ -270,10 +316,26 @@ export async function updateProject(req: Request, res: Response) {
 
 export async function deleteProject(req: Request, res: Response) {
   const { id } = req.params
+  let targetPublicId: string | null = null
+
   if (isDbConnected()) {
     try {
-      await Project.findByIdAndDelete(id)
+      const doc = await Project.findById(id)
+      if (doc) {
+        targetPublicId = doc.imagePublicId || (doc.image ? extractPublicIdFromUrl(doc.image) : null)
+        await Project.findByIdAndDelete(id)
+      }
     } catch (err) {}
+  }
+
+  const db = getDb()
+  const localDoc = (db.projects || []).find((p: any) => p.id === id)
+  if (localDoc && !targetPublicId) {
+    targetPublicId = localDoc.imagePublicId || (localDoc.image ? extractPublicIdFromUrl(localDoc.image) : null)
+  }
+
+  if (targetPublicId) {
+    deleteFromCloudinary(targetPublicId).catch(() => {})
   }
 
   const deleted = deleteItem('projects', id)
@@ -581,95 +643,174 @@ export async function createGalleryItem(req: Request, res: Response) {
 
 export async function deleteGalleryItem(req: Request, res: Response) {
   const { id } = req.params
+  let targetPublicId: string | null = null
+
+  if (isDbConnected()) {
+    try {
+      const doc = await GalleryItem.findById(id)
+      if (doc) {
+        targetPublicId = doc.imagePublicId || (doc.image ? extractPublicIdFromUrl(doc.image) : null)
+        await GalleryItem.findByIdAndDelete(id)
+      }
+    } catch (err) {}
+  }
+
+  const db = getDb()
+  const localDoc = (db.gallery || []).find((g: any) => g.id === id)
+  if (localDoc && !targetPublicId) {
+    targetPublicId = localDoc.imagePublicId || (localDoc.image ? extractPublicIdFromUrl(localDoc.image) : null)
+  }
+
+  if (targetPublicId) {
+    deleteFromCloudinary(targetPublicId).catch(() => {})
+  }
+
   const deleted = deleteItem('gallery', id)
   logActivity(`${req.user?.name}`, 'GALLERY_ITEM_DELETED', `Media ID: ${id}`, 'Deleted media')
   return res.json({ ok: true, message: 'Item deleted.' })
 }
 
 export async function uploadMedia(req: Request, res: Response) {
-  const { name, data } = req.body || {}
-  if (!data || typeof data !== 'string') {
-    return res.status(400).json({ ok: false, error: 'No media payload provided.' })
-  }
-
   try {
+    let buffer: Buffer | null = null
+    let originalName = 'upload'
     let mimeType = 'image/png'
-    let base64Data = data.trim()
 
-    // Handle data URL scheme (e.g. data:image/png;base64,.... or data:image/svg+xml;charset=utf-8;base64,....)
-    if (base64Data.startsWith('data:')) {
-      const commaIdx = base64Data.indexOf(',')
-      if (commaIdx !== -1) {
-        const header = base64Data.slice(5, commaIdx)
-        const semiIdx = header.indexOf(';')
-        if (semiIdx !== -1) {
-          mimeType = header.slice(0, semiIdx).toLowerCase().trim()
-        } else {
-          mimeType = header.toLowerCase().trim()
+    // Case 1: Multer uploaded file in memoryStorage
+    if (req.file) {
+      buffer = req.file.buffer
+      originalName = req.file.originalname || 'upload'
+      mimeType = req.file.mimetype || 'image/png'
+    } else if (req.body && typeof req.body.data === 'string') {
+      // Case 2: Base64 data payload
+      let base64Data = req.body.data.trim()
+      originalName = req.body.name || 'upload'
+
+      if (base64Data.startsWith('data:')) {
+        const commaIdx = base64Data.indexOf(',')
+        if (commaIdx !== -1) {
+          const header = base64Data.slice(5, commaIdx)
+          const semiIdx = header.indexOf(';')
+          mimeType = semiIdx !== -1 ? header.slice(0, semiIdx).toLowerCase().trim() : header.toLowerCase().trim()
+          base64Data = base64Data.slice(commaIdx + 1)
         }
-        base64Data = base64Data.slice(commaIdx + 1)
+      }
+
+      base64Data = base64Data.replace(/[\r\n\s]+/g, '')
+      if (base64Data) {
+        buffer = Buffer.from(base64Data, 'base64')
       }
     }
 
-    // Strip any whitespace or line breaks
-    base64Data = base64Data.replace(/[\r\n\s]+/g, '')
-    if (!base64Data) {
-      return res.status(400).json({ ok: false, error: 'Empty base64 data after extraction.' })
+    if (!buffer || buffer.length === 0) {
+      return res.status(400).json({ ok: false, error: 'No image file or binary payload provided.' })
     }
 
-    const buffer = Buffer.from(base64Data, 'base64')
-    if (buffer.length === 0) {
-      return res.status(400).json({ ok: false, error: 'Failed to decode image data.' })
+    // 10MB limit validation
+    if (buffer.length > 10 * 1024 * 1024) {
+      return res.status(400).json({ ok: false, error: 'File size exceeds maximum allowed 10MB limit.' })
     }
 
-    // Limit check: 25MB max binary
-    if (buffer.length > 25 * 1024 * 1024) {
-      return res.status(400).json({ ok: false, error: 'File size exceeds maximum 25MB limit.' })
+    const folder = (req.body?.folder || req.query?.folder || 'tavqen').toString()
+
+    // Upload to Cloudinary stream
+    const uploadResult = await uploadToCloudinary(buffer, {
+      folder,
+      filename: originalName,
+      publicId: req.body?.publicId || undefined,
+    })
+
+    // Persist to MongoDB MediaAsset if connected
+    if (isDbConnected()) {
+      try {
+        await MediaAsset.create({
+          name: originalName,
+          url: uploadResult.url,
+          secureUrl: uploadResult.secureUrl,
+          publicId: uploadResult.publicId,
+          format: uploadResult.format,
+          bytes: uploadResult.bytes,
+          folder,
+          uploader: req.user?.email || 'admin',
+        })
+      } catch (dbErr) {
+        console.warn('MongoDB MediaAsset save warning:', dbErr)
+      }
     }
 
-    // Determine extension intelligently
-    const originalExt = path.extname(name || '').toLowerCase()
-    let ext = originalExt
-    if (!ext || ext.length < 2) {
-      if (mimeType.includes('jpeg') || mimeType.includes('jpg')) ext = '.jpg'
-      else if (mimeType.includes('webp')) ext = '.webp'
-      else if (mimeType.includes('svg')) ext = '.svg'
-      else if (mimeType.includes('gif')) ext = '.gif'
-      else if (mimeType.includes('avif')) ext = '.avif'
-      else if (mimeType.includes('png')) ext = '.png'
-      else ext = '.png'
-    }
-
-    const rawBaseName = originalExt ? path.basename(name || 'upload', originalExt) : (name || 'upload')
-    const cleanBaseName = rawBaseName.replace(/[^a-zA-Z0-9_-]/g, '_').slice(0, 50) || 'upload'
-    const fileName = `${Date.now()}-${cleanBaseName}${ext}`
-    const filePath = path.join(uploadsDir, fileName)
-
-    if (!fs.existsSync(uploadsDir)) {
-      fs.mkdirSync(uploadsDir, { recursive: true })
-    }
-
-    fs.writeFileSync(filePath, buffer)
-    const url = `/uploads/${fileName}`
+    // Also persist entry to local DB media collection
+    try {
+      insertItem('media', {
+        name: originalName,
+        url: uploadResult.secureUrl,
+        publicId: uploadResult.publicId,
+        format: uploadResult.format,
+        bytes: uploadResult.bytes,
+        folder,
+        uploadedAt: new Date().toISOString(),
+      })
+    } catch (e) {}
 
     logActivity(
       req.user?.name ? `${req.user.name}` : 'Admin',
       'MEDIA_UPLOADED',
-      `File: ${fileName}`,
+      `Cloudinary Asset: ${uploadResult.publicId}`,
       `${(buffer.length / 1024).toFixed(1)} KB`
     )
 
     return res.json({
       ok: true,
-      url,
-      fileName,
-      sizeBytes: buffer.length,
-      mimeType,
+      url: uploadResult.secureUrl,
+      secureUrl: uploadResult.secureUrl,
+      publicId: uploadResult.publicId,
+      format: uploadResult.format,
+      bytes: uploadResult.bytes,
+      width: uploadResult.width,
+      height: uploadResult.height,
+      fileName: originalName,
       uploadedAt: new Date().toISOString(),
     })
   } catch (err: any) {
     console.error('Error in uploadMedia:', err)
     return res.status(500).json({ ok: false, error: err.message || 'Media upload failed' })
+  }
+}
+
+export async function deleteMedia(req: Request, res: Response) {
+  const publicId = (req.body?.publicId || req.query?.publicId || req.params?.publicId || '').toString().trim()
+  const url = (req.body?.url || req.query?.url || '').toString().trim()
+
+  const targetId = publicId || (url ? extractPublicIdFromUrl(url) : null)
+  if (!targetId) {
+    return res.status(400).json({ ok: false, error: 'publicId or valid Cloudinary url is required.' })
+  }
+
+  try {
+    await deleteFromCloudinary(targetId)
+
+    if (isDbConnected()) {
+      try {
+        await MediaAsset.findOneAndDelete({ publicId: targetId })
+      } catch (err) {}
+    }
+
+    const db = getDb()
+    if (Array.isArray(db.media)) {
+      db.media = db.media.filter((m: any) => m.publicId !== targetId)
+      saveDb(db)
+    }
+
+    logActivity(
+      req.user?.name ? `${req.user.name}` : 'Admin',
+      'MEDIA_DELETED',
+      `Asset: ${targetId}`,
+      'Deleted Cloudinary media asset'
+    )
+
+    return res.json({ ok: true, message: 'Media asset deleted successfully.', publicId: targetId })
+  } catch (err: any) {
+    console.error('Error deleting media:', err)
+    return res.status(500).json({ ok: false, error: err.message || 'Failed to delete media asset' })
   }
 }
 

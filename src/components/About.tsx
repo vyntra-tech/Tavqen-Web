@@ -3,7 +3,6 @@ import { ArrowRight, Play, Pause, Volume2, VolumeX, Maximize2 } from 'lucide-rea
 import { useContent } from '../context/ContentContext'
 import { getImageUrl } from '../lib/image'
 import tavqenFav from '../assets/TAVQEN_fav.png'
-import aboutVideo from '../assets/about-vedeio.mp4'
 
 export default function About() {
   const { content } = useContent()
@@ -17,7 +16,7 @@ export default function About() {
   const stats = about?.stats || []
   const ctaText = about?.ctaText || "Let's Talk"
   const ctaHref = about?.ctaHref || '#contact'
-   const videoSrc = aboutVideo || getImageUrl(about?.video?.src) || '/about-vedeio.mp4'
+  const videoSrc = getImageUrl(about?.video?.src) || '/uploads/about-vedeio.mp4'
   const videoPoster = getImageUrl(about?.video?.poster)
   const videoCaption = about?.video?.caption || 'Meet TAVQEN'
 

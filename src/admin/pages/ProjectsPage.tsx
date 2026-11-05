@@ -44,6 +44,7 @@ import { ConfirmModal } from '../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import type { Showcase } from '../../types'
 import { getImageUrl } from '../../lib/image'
+import { ImageUploader } from '../../components/ImageUploader'
 
 const CATEGORIES = [
   'Web Applications',
@@ -71,6 +72,7 @@ export function ProjectsPage() {
     tech: [],
     features: [],
     image: '',
+    imagePublicId: '',
     url: '',
     githubUrl: '',
     status: 'published',
@@ -119,6 +121,7 @@ export function ProjectsPage() {
       tech: ['React', 'TypeScript'],
       features: ['Responsive UI', 'Sub-second Latency'],
       image: '',
+      imagePublicId: '',
       url: '',
       githubUrl: '',
       status: 'published',
@@ -572,21 +575,30 @@ export function ProjectsPage() {
                 </FormControl>
               </HStack>
 
-              {/* Thumbnail Upload */}
+              {/* Cloudinary Project Thumbnail Uploader */}
               <FormControl>
-                <FormLabel fontSize="xs">Project Thumbnail</FormLabel>
-                <HStack spacing={3}>
-                  <Input
-                    type="file"
-                    accept="image/*"
-                    size="sm"
-                    p={1}
-                    onChange={handleImageUpload}
-                  />
-                  {formData.image && (
-                    <Image src={getImageUrl(formData.image)} boxSize="40px" borderRadius="md" objectFit="cover" />
-                  )}
-                </HStack>
+                <ImageUploader
+                  label="Project Thumbnail (Cloudinary)"
+                  value={formData.image}
+                  publicId={formData.imagePublicId}
+                  folder="tavqen/projects"
+                  aspectRatio="video"
+                  onChange={(url, publicId) => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      image: url,
+                      imagePublicId: publicId,
+                    }))
+                  }}
+                  onRemove={() => {
+                    setFormData((prev) => ({
+                      ...prev,
+                      image: '',
+                      imagePublicId: '',
+                    }))
+                  }}
+                  helpText="Supported formats: JPG, PNG, WEBP, SVG. Optimized and served via Cloudinary CDN."
+                />
               </FormControl>
 
               <HStack w="full" justify="space-between" pt={2}>

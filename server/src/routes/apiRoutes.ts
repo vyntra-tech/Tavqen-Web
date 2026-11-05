@@ -2,6 +2,7 @@ import { Router } from 'express'
 import rateLimit from 'express-rate-limit'
 import { authenticateToken, requireRole } from '../middleware/auth.js'
 import * as Ctrl from '../controllers/apiController.js'
+import { uploadSingle } from '../middleware/upload.middleware.js'
 
 const router = Router()
 
@@ -93,7 +94,14 @@ router.delete('/admin/messages/:id', authenticateToken, requireRole(['admin']), 
 router.get('/admin/gallery', authenticateToken, Ctrl.getGallery)
 router.post('/admin/gallery', authenticateToken, Ctrl.createGalleryItem)
 router.delete('/admin/gallery/:id', authenticateToken, requireRole(['admin']), Ctrl.deleteGalleryItem)
-router.post('/admin/media/upload', authenticateToken, Ctrl.uploadMedia)
+router.post('/admin/media/upload', authenticateToken, uploadSingle('file'), Ctrl.uploadMedia)
+router.delete('/admin/media/delete', authenticateToken, Ctrl.deleteMedia)
+router.delete('/admin/media/:publicId(*)', authenticateToken, Ctrl.deleteMedia)
+
+// Direct /api/upload aliases
+router.post('/upload', authenticateToken, uploadSingle('file'), Ctrl.uploadMedia)
+router.delete('/upload', authenticateToken, Ctrl.deleteMedia)
+router.delete('/upload/:publicId(*)', authenticateToken, Ctrl.deleteMedia)
 
 // Website Content CMS
 router.get('/admin/content', authenticateToken, Ctrl.getContent)
